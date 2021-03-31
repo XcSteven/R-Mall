@@ -1,0 +1,53 @@
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: yellowgreen;
+    width: 100%;
+}
+
+.header-navbar a {
+    float: right;
+    padding: 14px 16px;
+    text-align: center;
+    background-color: rgb(111, 198, 238);
+    color: white;
+    font-size: 17px;
+}
+
+.header-navbar a:hover {
+    background-color: crimson;
+    color: yellow;
+}
+
+.header-navbar a:active {
+    background-color: grey;
+    color: coral;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color:rgb(197, 189, 189);
+    width: 100%;
+}
+
+.footer-navbar a {
+    float: right;
+    padding: 14px 16px;
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    font-size: 17px;
+} 
+
+.footer-navbar a:hover {
+    background-color: crimson;
+    color: yellow;
+}
+
+.footer-navbar a:active {
+    background-color: grey;
+    color: coral;
+}

@@ -2,17 +2,23 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: yellowgreen;
     width: 100%;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
 }
 
+.header-navbar {
+	float: right;
+}
 .header-navbar a {
-    float: right;
+    float: left;
     padding: 14px 16px;
     text-align: center;
     background-color: rgb(111, 198, 238);
     color: white;
-    font-size: 17px;
+    font-size: 16px;
+	text-decoration: none;
+	font-family: "Helvetica", sans-serif;
 }
 
 .header-navbar a:hover {
@@ -20,26 +26,28 @@
     color: yellow;
 }
 
-.header-navbar a:active {
+.header-navbar a.active {
     background-color: grey;
     color: coral;
 }
 
-.footer {
-    position: fixed;
+.footer-navbar {
     bottom: 0px;
     right: 0px;
     background-color:rgb(197, 189, 189);
-    width: 100%;
+	float: right;
+	position: fixed;
 }
 
 .footer-navbar a {
-    float: right;
+    float: left;
     padding: 14px 16px;
     text-align: center;
     background-color: transparent;
     color: black;
-    font-size: 17px;
+    font-size: 16px;
+	text-decoration: none;
+	font-family: "Helvetica", sans-serif;
 } 
 
 .footer-navbar a:hover {

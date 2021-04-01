@@ -13,6 +13,7 @@
 	right: 0;
 	top: 0;
 	position: absolute;
+	width: auto;
 }
 
 .nav-menu-bar a {
@@ -38,6 +39,7 @@
 	right: 0;
 	bottom: 0;
 	position: flex;
+	width: auto;
 }
 
 .bottom-nav-bar a {
@@ -89,15 +91,6 @@
 	padding: 0 10px;
 }
 
-.row {
-	margin: 0 -5px;
-}
-
-.row:after {
-	content: "";
-	display: table;
-}
-
 .card-box {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 	padding: 10px;
@@ -106,6 +99,59 @@
 	box-sizing: border-box;
 }
 
-.split {
-	margin-top: 25px;
+.form {
+	margin: 25px auto;
+	width: 50%;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.form h1 {
+	margin: 16px auto;
+	width: 50%;
+	border-style: solid;
+	border-color: #000000;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+	padding: 8px;
+	background-color: #710c04;
+	color: #ffffff;
+}
+.form p {
+	font-family: "Helvetica", sans-serif;
+	
+}
+.form label {
+	font-family: "Helvetica", sans-serif;
+}
+
+.form input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.form input:focus {
+	background-color: #f5f5f5;
+}
+
+.form input:hover {
+	opacity: 0.8;
+}
+.form input[type=radio] {
+	width: 5%;
+}
+
+.form select {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.form input[type=submit] {
+	background-color: #a91b0d;
+	color: #ffffff;
 }

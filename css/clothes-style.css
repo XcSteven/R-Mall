@@ -18,28 +18,28 @@
     float: left;
     display: block;
     color: indianred;
-    padding-top: 55px;
-    font-size: 30px;
+    padding-top: 20px;
+    font-size: 24px;
     font-weight: bold;
-    padding-right: 70px;
+    padding-right: 28px;
 	text-decoration: none;
 	font-family: "Helvetica", sans-serif;
 }
 
 .header-navbar a:hover {
 
-    color: indianred;
+    color: #cd5c5c;
     font-style: oblique;
 }
 
 .header-navbar a.active {
-    color:rgb(156, 13, 13);
+    color: #9c0d0d;
 }
 
 .footer-navbar {
     bottom: 0px;
     right: 0px;
-    background-color:rgb(197, 189, 189);
+    background-color:#c5bdbd;
 	float: right;
 	position: fixed;
 }
@@ -56,11 +56,11 @@
 } 
 
 .footer-navbar a:hover {
-    background-color: crimson;
-    color: yellow;
+    background-color: #dc143c;
+    color: #ffff00;
 }
 
 .footer-navbar a:active {
-    background-color: grey;
-    color: coral;
+    background-color: #808080;
+    color: #ff7f50;
 }

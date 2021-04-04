@@ -54,11 +54,11 @@
 } 
 
 .footer-navbar a:hover {
-    background-color: crimson;
-    color: yellow;
+    background-color: #dc143c;
+    color: #ffff00;
 }
 
 .footer-navbar a:active {
-    background-color: grey;
-    color: coral;
+    background-color: #808080;
+    color: #ff7f50;
 }

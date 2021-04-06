@@ -12,7 +12,7 @@
 	float: right;
 	right: 0;
 	top: 0;
-	position: absolute;
+	position: fixed;
 	width: auto;
 }
 
@@ -36,9 +36,9 @@
 
 .bottom-nav-bar {
 	float: right;
+	position: fixed;
 	right: 0;
 	bottom: 0;
-	position: flex;
 	width: auto;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .bottom-nav-bar a.active {
-	color: #b22222;
+	color: #5dbb63;
 }
 
 .bottom-nav-bar a:hover {
@@ -73,7 +73,7 @@
 }
 .title {
 	float: left;
-	width: 18%;
+	width: 20%;
 	border-style: solid;
 	margin: 0 10px;
 	box-sizing: border-box;
@@ -87,8 +87,8 @@
 
 .column {
 	float: left;
-	width: 25%;
-	padding: 0 10px;
+	width: 20%;
+	padding: 0 20px;
 }
 
 .card-box {
@@ -120,8 +120,8 @@
 }
 .form p {
 	font-family: "Helvetica", sans-serif;
-	
 }
+
 .form label {
 	font-family: "Helvetica", sans-serif;
 }
@@ -141,6 +141,7 @@
 .form input:hover {
 	opacity: 0.8;
 }
+
 .form input[type=radio] {
 	width: 5%;
 }
@@ -151,7 +152,102 @@
 	margin: 10px 0;
 }
 
-.form input[type=submit] {
+.form a {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	font-size: 16px;
 	background-color: #a91b0d;
 	color: #ffffff;
+	text-decoration: none;
+}
+
+.form a:hover {
+	background-color: #e2252b;
+	color: #000000;
+}
+
+.thanku {
+	margin: 25px auto;
+	width: 50%;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.thanku p {
+	font-family: "Helvetica", sans-serif;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.thanku a {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	background-color: #a91b0d;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.thanku a:hover {
+	background-color: #e2252b;
+	color: #000000;
+}
+.login {
+	margin: 25px auto;
+	width: 50%;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.login label {
+	font-family: "Helvetica", sans-serif;
+}
+
+.login input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.login input:focus {
+	background-color: #f5f5f5;
+}
+
+.login input:hover {
+	opacity: 0.8;
+}
+
+.login a {
+	width: 49.25%;
+	display: inline-block;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	background-color: #a91b0d;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.login a:hover {
+	background-color: #e2252b;
+	color: #000000;
 }

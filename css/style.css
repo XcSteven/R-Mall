@@ -146,10 +146,43 @@
 	width: 5%;
 }
 
+.form input[type=checkbox] {
+	width: 3.65%;
+}
+
+.form input[type=reset] {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	background-color: #a91b0d;
+	color: #ffffff;
+	text-decoration: none;
+	border: none;
+}
+
+.form input[type=reset]:hover {
+	background-color: #e2252b;
+	color: #000000;
+}
+
+.form input:valid {
+	background-color: #99edc3;
+	color: #000000;
+}
 .form select {
 	width: 100%;
 	padding: 10px;
 	margin: 10px 0;
+}
+
+.form textarea {
+	resize: none;
+	width: 100%;
 }
 
 .form a {

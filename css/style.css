@@ -60,6 +60,20 @@
 	color: #a45ee5;
 }
 
+.footer {
+	float: left;
+	display: inline-block;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.footer p {
+	font-family: "Helvetica", sans-serif;
+}
+	
+
 .main {
 	font-family: "Helvetica", sans-serif;
 }
@@ -118,6 +132,7 @@
 	background-color: #710c04;
 	color: #ffffff;
 }
+
 .form p {
 	font-family: "Helvetica", sans-serif;
 }
@@ -170,10 +185,6 @@
 	color: #000000;
 }
 
-.form input:valid {
-	background-color: #99edc3;
-	color: #000000;
-}
 .form select {
 	width: 100%;
 	padding: 10px;
@@ -283,4 +294,30 @@
 .login a:hover {
 	background-color: #e2252b;
 	color: #000000;
+}
+
+.pptos {
+	margin: 25px auto;
+	width: 75%;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.pptos h2 {
+	font-family: "Helvetica", sans-serif;
+	text-align: center;
+}
+
+.pptos p {
+	font-family: "Helvetica", sans-serif;
+}
+
+.pptos a {
+	font-family: "Helvetica", sans-serif;
+	text-decoration: none;
+}
+
+.pptos ul {
+	font-family: "Helvetica", sans-serif;
 }

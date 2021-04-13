@@ -1,7 +1,7 @@
 # Group introduction:
 Github URL of the group's repo: https://github.com/XcSteven/WPasm1/
 Our team has 3 members:
-- Bui Nguyen Ngoc Tuan: Leader of the group (final-check everything committed by the members), in charge of the Mall pages.
+- Bui Nguyen Ngoc Tuan: Leader of the group (double-check everything committed by the members), in charge of the Mall pages.
 - Vo Tran Khanh Linh: in charge of the Clothes Store pages.
 - Duong Tuan Nghia: in charge of the Food Store pages. </br>
 Even though our work is divided detailedly, cross-helping among members is also allowed, as this is a complex assignment. </br>

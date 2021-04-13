@@ -6,6 +6,14 @@
 		<title>Register</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
+		<script>
+			function StoreownerCheck() {
+				if (document.getElementById('storeown').checked) {
+					document.getElementById('ifStoreown').style.display = 'block';
+				}
+				else document.getElementById('ifStoreown').style.display = 'none';
+			}
+		</script>
 	</head>
 	<body>
 		<body style="background-color:#F5F5DC">
@@ -15,7 +23,7 @@
 				<a href="index.html">Home</a>
 				<a href="aboutus.html">About Us</a>
 				<a href="fees.html">Fees</a>
-				<a href="*">My Account</a>
+				<a href="myaccount-notloggedin.html">My Account</a>
 				<a href="browse.html">Browse</a>
 				<a href="faqs.html">FAQs</a>
 				<a href="contact.html">Contact</a>
@@ -301,12 +309,35 @@
 					<option value="ZM">Zambia</option>
 					<option value="ZW">Zimbabwe</option>
 				</select>
-				<p>Select your account type:
-				<input type="radio" id="storeown" name="acctype" value="storeown">
-				<label for="storeown">Store Owner</label>
-				<input type="radio" id="shop" name="acctype" value="shop">
+				<p>Select your account type:</p>
+				<input type="radio" onclick="javascript:StoreownerCheck();" id="shop" name="acctype" value="shop">
 				<label for="shop">Shopper</label>
-				</p>
+				<input type="radio" onclick="javascript:StoreownerCheck();" id="storeown" name="acctype" value="storeown">
+				<label for="storeown">Store Owner</label>
+				<div id="ifStoreown" style="display:none">
+					<label for="busname">Business Name</label>
+					<input type="text" id="busname" name="busname">
+					<label for="stoname">Store Name</label>
+					<input type="text" id="stoname" name="stoname">
+					<label for="stocategory">Store Category</label>
+					<select id="stocategory" name="stocategory">
+					<option>Select Store Category</option>
+					<option>Department Store</option>
+					<option>Grocery Store</option>
+					<option>Restaurant</option>
+					<option>Clothing Store</option>
+					<option>Accessory Store</option>
+					<option>Pharmacy</option>
+					<option>Technology Store</option>
+					<option>Pet Store</option>
+					<option>Toy Store</option>
+					<option>Specialty Store</option>
+					<option>Thrift Store</option>
+					<option>Service</option>
+					<option>Kiosk</option>
+					</select>
+				</div>
+				<input type="reset" value="Reset">
 				<a href="thankyou.html">Submit</a>
 			</form>
 		</div>
@@ -314,7 +345,6 @@
 		<footer class="footer">
 			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
 			<nav class="bottom-nav-bar">
-				<a href="copyright.html">Copyright</a>
 				<a href="tos.html">Terms of Service</a>
 				<a href="privacypolicy.html">Privacy Policy</a>
 			</nav>

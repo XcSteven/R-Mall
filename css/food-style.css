@@ -1,27 +1,18 @@
 .header {
-	float: left;
-	padding-bottom: 12px;
-	display: inline-block;
-	box-sizing: border-box;
-	top: 0;
-	left: 0;
-	width: 100%;
+    display: inline-block;
+    top: 0px;
+    left: 0px;
+    background-color: yellowgreen;
+    width: 100%;
 }
 
-.header-navbar {
-	float: right;
-	right: 0;
-	top: 0;
-	position: absolute;
-}
 .header-navbar a {
-    float: left;
-    padding: 14px 16px;
-    background-color: #6fc6ee;
-    color: #ffffff;
-    font-size: 18px;
-	text-decoration: none;
-	font-family: "Helvetica", sans-serif;
+    float: right;
+    padding: 14px 14px;
+    text-align: center;
+    background-color: rgb(111, 198, 238);
+    color: black;
+    font-size: 17px;
 }
 
 .header-navbar a:hover {
@@ -29,36 +20,69 @@
     color: yellow;
 }
 
-.header-navbar a.active {
+.header-navbar a:active {
     background-color: grey;
     color: coral;
 }
 
-.footer-navbar {
+.footer {
+    display: inline-block;
     bottom: 0px;
     right: 0px;
     background-color:rgb(197, 189, 189);
-	float: right;
-	position: fixed;
+    width: 100%;
 }
 
 .footer-navbar a {
     float: left;
-    padding: 14px 16px;
+    padding: 14px 14px;
     text-align: center;
-    background-color: transparent;
+    background-color:transparent;
     color: black;
-    font-size: 16px;
-	text-decoration: none;
-	font-family: "Helvetica", sans-serif;
+    font-size: 17px;
 } 
 
 .footer-navbar a:hover {
-    background-color: #dc143c;
-    color: #ffff00;
+    background-color: crimson;
+    color: yellow;
 }
 
 .footer-navbar a:active {
-    background-color: #808080;
-    color: #ff7f50;
+    background-color: grey;
+    color: coral;
+}
+
+.list {
+	padding-bottom: 25px;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.title {
+	float: left;
+	width: 20%;
+	border-style: solid;
+	margin: 0 10px;
+	box-sizing: border-box;
+	padding: 0 16px;
+	font-size: 12px;
+	text-align: center;
+	border-color: #000000;
+	background-color: #67569b;
+	color: #ffffff;
+}
+
+.column {
+	float: left;
+	width: 20%;
+	padding: 0 20px;
+}
+
+.card-box {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	text-align: center;
+	background-color: #d0dbd1;
+	box-sizing: border-box;
 }

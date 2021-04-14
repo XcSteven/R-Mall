@@ -2,7 +2,7 @@
     display: inline-block;
     top: 0px;
     left: 0px;
-    background-color: yellowgreen;
+    background-color: #9acd32;
     width: 100%;
 }
 
@@ -10,26 +10,26 @@
     float: right;
     padding: 14px 14px;
     text-align: center;
-    background-color: rgb(111, 198, 238);
-    color: black;
+    background-color: #6fc6ee;
+    color: #000000;
     font-size: 17px;
 }
 
 .header-navbar a:hover {
-    background-color: crimson;
-    color: yellow;
+    background-color: #dc143c;
+    color: #ffff00;
 }
 
 .header-navbar a:active {
-    background-color: grey;
-    color: coral;
+    background-color: #808080;
+    color: #ff7f50;
 }
 
 .footer {
     display: inline-block;
     bottom: 0px;
     right: 0px;
-    background-color:rgb(197, 189, 189);
+    background-color: #c5bdbd;
     width: 100%;
 }
 
@@ -38,18 +38,18 @@
     padding: 14px 14px;
     text-align: center;
     background-color:transparent;
-    color: black;
+    color: #000000;
     font-size: 17px;
 } 
 
 .footer-navbar a:hover {
-    background-color: crimson;
-    color: yellow;
+    background-color: #dc143c;
+    color: #ffff00;
 }
 
 .footer-navbar a:active {
-    background-color: grey;
-    color: coral;
+    background-color: #808080;
+    color: #ff7f50;
 }
 
 .list {

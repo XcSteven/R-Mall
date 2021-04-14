@@ -13,62 +13,61 @@
 	right: 0;
 	top: 0;
 	position: fixed;
-    width: auto;
+   	width: auto;
 }
 .header-navbar a {
-    float: left;
-    display: block;
-    color: #dc143c;
-    padding-top: 20px;
-    font-weight: bold;
-    padding-right: 28px;
+    	float: left;
+    	display: block;
+    	color: #dc143c;
+    	padding-top: 20px;
+    	font-weight: bold;
+    	padding-right: 28px;
 	text-decoration: none;
 	font-family: "Helvetica", sans-serif;
 }
 
 .header-navbar a:hover {
-
-    color: #cd5c5c;
-    font-style: oblique;
+    	color: #cd5c5c;
+    	font-style: oblique;
 }
 
 .header-navbar a.active {
-    color: #b92e2e;
+    	color: #b92e2e;
 }
 
 .footer-navbar {
-    bottom: 0px;
-    right: 0px;
-    background-color:#c5bdbd;
+    	bottom: 0px;
+    	right: 0px;
+    	background-color:#c5bdbd;
 	float: right;
 	position: fixed;
 }
 
 .footer-navbar a {
-    float: left;
-    padding: 14px 16px;
-    text-align: center;
-    background-color: transparent;
-    color: black;
-    font-size: 16px;
+    	float: left;
+    	padding: 14px 16px;
+   	text-align: center;
+    	background-color: #ffffff00;
+    	color: #000000;
+    	font-size: 16px;
 	text-decoration: none;
 	font-family: "Helvetica", sans-serif;
 } 
 
 .footer-navbar a:hover {
-    color: #cd5c5c;
+    	color: #cd5c5c;
 }
 
 .footer-navbar a:active {
-    background-color: #808080;
-    color: #ff7f50;
+    	background-color: #808080;
+    	color: #ff7f50;
 }
 
 .products{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #cf311c;
-    text-align: center;
-    font-size: 20px;
+    	font-family: Georgia, 'Times New Roman', Times, serif;
+    	color: #cf311c;
+    	text-align: center;
+    	font-size: 20px;
 }
 
 .footer {
@@ -85,46 +84,46 @@
 }
 
 .dropdown {
-    float: left;
-    overflow: hidden;
+    	float: left;
+    	overflow: hidden;
   }
   
 .dropdown .dropbtn {
-    float: left;
-    color: #dc143c;
-    padding-top: 20px;
-    font-weight: bold;
-    padding-right: 28px;
+    	float: left;
+    	color: #dc143c;
+    	padding-top: 20px;
+    	font-weight: bold;
+    	padding-right: 28px;
 	text-decoration: none;
 	font-family: "Helvetica", sans-serif;
   }
   
   
 .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    z-index: 1;
+    	display: none;
+    	position: absolute;
+    	min-width: 160px;
+    	z-index: 1;
   }
   
 .dropdown-content a {
-    float: none;
-    font-size: 12px;
-    color: black;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+    	float: none;
+    	font-size: 12px;
+    	color: #000000;
+    	text-decoration: none;
+    	display: block;
+    	text-align: left;
   }
   
 .dropdown:hover .dropdown-content {
-    display: contents;
+    	display: contents;
   }
 
 .pcategories {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #000000;
-    text-align: left;
-    font-size: 20px;
+    	font-family: Georgia, 'Times New Roman', Times, serif;
+    	color: #000000;
+    	text-align: left;
+    	font-size: 20px;
 }
 
 

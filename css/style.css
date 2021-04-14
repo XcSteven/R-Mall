@@ -30,6 +30,10 @@
 	color: #1338be;
 }
 
+.header img {
+	border: solid;
+}
+
 .footer {
 	float: left;
 	display: inline-block;
@@ -43,7 +47,7 @@
 	text-align: center;
 	
 }
-.footer-myacc {
+.footer-stick {
 	float: left;
 	display: inline-block;
 	box-sizing: border-box;
@@ -52,7 +56,7 @@
 	bottom: 0;
 }
 
-.footer-myacc p {
+.footer-stick p {
 	font-family: "Helvetica", sans-serif;
 	margin: auto;
 	text-align: center;
@@ -103,11 +107,27 @@
 	width: 20%;
 }
 
+.column-browse {
+	float: left;
+	margin: 0 auto;
+	width: 45%;
+	height: 100%;
+}
+
 .card-box {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 	text-align: center;
 	background-color: #fafafa;
 	box-sizing: border-box;
+}
+
+.card-box-border {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	text-align: center;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	border: solid;
+	border-width: thin;
 }
 
 .form {
@@ -149,10 +169,6 @@
 
 .form input:hover {
 	opacity: 0.8;
-}
-
-.form input[type=checkbox] {
-	width: 3.65%;
 }
 
 .form input[type=reset] {
@@ -216,7 +232,6 @@
 .thanku p {
 	font-family: "Helvetica", sans-serif;
 	text-align: center;
-	font-size: 20px;
 	font-weight: bold;
 	font-style: oblique;
 }
@@ -226,10 +241,7 @@
 	display: block;
 	text-align: center;
 	font-family: "Helvetica", sans-serif;
-	padding: 10px;
-	margin: 10px 0;
 	box-sizing: border-box;
-	font-size: 16px;
 	background-color: #a91b0d;
 	color: #ffffff;
 	text-decoration: none;
@@ -283,6 +295,50 @@
 	color: #000000;
 }
 
+.fpass {
+	margin: 25px auto;
+	width: 60%;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.fpass label {
+	font-family: "Helvetica", sans-serif;
+}
+
+.fpass input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.fpass input:focus {
+	background-color: #f5f5f5;
+}
+
+.fpass input:hover {
+	opacity: 0.8;
+}
+
+.fpass a {
+	display: inline-block;
+	text-align: center;
+	font-family: "Helvetica", sans-serif;
+	box-sizing: border-box;
+	background-color: #a91b0d;
+	color: #ffffff;
+	text-decoration: none;
+	width: 100%
+}
+
+.fpass a:hover {
+	background-color: #e2252b;
+	color: #000000;
+}
+
 .pptos {
 	border-style: solid;
 	padding: 10px;
@@ -301,6 +357,7 @@
 .pptos a {
 	font-family: "Helvetica", sans-serif;
 	text-decoration: none;
+	color: #d21502;
 }
 
 .pptos ul {
@@ -309,6 +366,10 @@
 
 
 @media screen and (min-width: 1024px) {
+	.header img {
+		height: 125px;
+		width: 250px;
+	}
 	.nav-menu-bar a {
 		font-size: 22px;
 		padding: 0 12px;
@@ -323,7 +384,7 @@
 		font-size: 16px;
 	}
 	
-	.footer-myacc p {
+	.footer-stick p {
 		font-size: 16px;
 	}
 	
@@ -337,15 +398,25 @@
 		padding: 0 20px;
 	}
 	
+	.column-browse {
+		padding: 0 20px;
+	}
+	
 	.card-box {
-		padding: 10px;
+		padding: 12px;
 	}
 	
 	.login a {
 		width: 32.5%;
-		padding: 8px;
-		margin: 10px 0;
-		font-size: 16px;
+		padding: 10px;
+		margin: 12px 0;
+		font-size: 20px;
+	}
+	
+	.fpass a {
+		padding: 10px;
+		margin: 12px 0;
+		font-size: 20px;
 	}
 	
 	.form {
@@ -361,13 +432,32 @@
 	width: 5%;
 	}
 	
+	.form input[type=checkbox] {
+	width: 2.65%;
+	}
+	
 	.pptos {
 	margin: 25px auto;
 	width: 75%;
 	}
+	
+	.thanku p {
+		font-size: 20px;
+	}
+	
+	.thanku a {
+		padding: 12px;
+		margin: 12px 0;
+		font-size: 18px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+	.header img {
+		height: 100px;
+		width: 200px;
+	}
+	
 	.nav-menu-bar a {
 		font-size: 18px;
 		padding: 0 10px;
@@ -383,7 +473,7 @@
 		padding-bottom: 20px;
 	}
 	
-	.footer-myacc p {
+	.footer-stick p {
 		font-size: 14px;
 		padding-bottom: 20px;
 	}
@@ -397,12 +487,22 @@
 		padding: 0 16px;
 	}
 	
+	.column-browse {
+		padding: 0 16px;
+	}
+	
 	.card-box {
 		padding: 10px;
 	}
 	
 	.login a {
 		width: 32.5%;
+		padding: 8px;
+		margin: 10px 0;
+		font-size: 16px;
+	}
+	
+	.fpass a {
 		padding: 8px;
 		margin: 10px 0;
 		font-size: 16px;
@@ -421,13 +521,31 @@
 	width: 5%;
 	}
 	
+	.form input[type=checkbox] {
+	width: 4.75%;
+	}
+	
 	.pptos {
 	margin: 20px auto;
 	width: 80%;
 	}
+	
+	.thanku p {
+		font-size: 18px;
+	}
+	
+	.thanku a {
+		padding: 10px;
+		margin: 10px 0;
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-width: 767px) {
+	.header img {
+		height: 75px;
+		width: 150px;
+	}
 	.nav-menu-bar a {
 		font-size: 14px;
 		padding: 0 6px;
@@ -443,7 +561,7 @@
 		padding-bottom: 20px;
 	}
 	
-	.footer-myacc p {
+	.footer-stick p {
 		font-size: 12px;
 		padding-bottom: 20px;
 	}
@@ -457,12 +575,22 @@
 		padding: 0 12px;
 	}
 	
+	.column-browse {
+		padding: 0 12px;
+	}
+	
 	.card-box {
 		padding: 8px;
 	}
 	
 	.login a {
 		width: 32%;
+		padding: 6px;
+		margin: 8px 0;
+		font-size: 12px;
+	}
+	
+	.fpass a {
 		padding: 6px;
 		margin: 8px 0;
 		font-size: 12px;
@@ -482,8 +610,22 @@
 	width: 8%;
 	}
 	
+	.form input[type=checkbox] {
+	width: 5.5%;
+	}
+	
 	.pptos {
 	margin: 15px auto;
 	width: 85%;
+	}
+	
+	.thanku p {
+		font-size: 16px;
+	}
+	
+	.thanku a {
+		padding: 8px;
+		margin: 8px 0;
+		font-size: 14px;
 	}
 }

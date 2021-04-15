@@ -57,19 +57,24 @@
 } 
 
 .footer-navbar a:hover {
-    	color: #cd5c5c;
+		font-weight: bold;
+    	color: #0d1e69;
 }
 
-.footer-navbar a:active {
-    	background-color: #808080;
-    	color: #ff7f50;
+.footer-navbar a.active {
+		font-weight: bold;
+    	background-color: #1f2964;
+    	color: #ffffff;
 }
 
 .products{
     	font-family: Georgia, 'Times New Roman', Times, serif;
-    	color: #cf311c;
+		color: #631717;
     	text-align: center;
-    	font-size: 20px;
+}
+.products a{
+	color: #000000;
+	text-decoration: none;
 }
 
 .footer {
@@ -170,7 +175,53 @@
 }
 
 .products-categories {
-	margin: 10px;
+	color:  #0d1e69;
+	text-align: center;
+	text-decoration: underline;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: 28px;
+	font-size: 23px;
+}
+
+.card-box a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.form_p {
+	text-align: right;
+	padding: 10px;
+}
+
+.form_p textarea {
+	resize: none;
+	width: 100%;
+}
+
+.form {
+    margin: 10px 100px;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.form h1 {
+    text-align: center;
+    font-family: "Helvetica", sans-serif;
+    font-size: 40px;
+}
+
+.form textarea {
+	resize: none;
+	width: 100%;
+}
+.pptos {
+	border-style: solid;
+    font-family: "Helvetica", sans-serif;
+	padding: 10px;
+    margin:10px 100px;
+	background-color: #fffdd0;
+}
+
+.pptos a {
+	text-decoration: none;
 }

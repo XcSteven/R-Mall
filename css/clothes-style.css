@@ -18,7 +18,7 @@
 .header-navbar a {
     float: left;
     display: inline-block;
-    color: #dc143c;
+	color: #000000;
 	border: solid;
 	padding: 6px;
 	margin: 0 2px;
@@ -28,11 +28,12 @@
 }
 
 .header-navbar a:hover {
-    	color: #cd5c5c;
-    	font-style: oblique;
+		background-color: #fafafa;
+    	color: #0d1e69;
 }
 
 .header-navbar a.active {
+		background-color: #fafafa;
     	color: #b92e2e;
 }
 
@@ -156,6 +157,7 @@
 	background-color: #fafafa;
 	box-sizing: border-box;
 	overflow: auto;
+	margin: 8px;
 }
 
 .card-box-border {
@@ -168,6 +170,7 @@
 }
 
 .products-categories {
+	margin: 10px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 28px;
 }

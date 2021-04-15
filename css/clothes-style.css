@@ -119,13 +119,53 @@
     	display: contents;
   }
 
-.pcategories {
-    	font-family: Georgia, 'Times New Roman', Times, serif;
+.products-general {
+    	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     	color: #000000;
     	text-align: left;
-    	font-size: 20px;
 }
 
+.list {
+	float: left;
+	padding-bottom: 25px;
+	box-sizing: border-box;
+	width: 100%;
+	overflow-y: auto;
+	flex-direction: row;
+	display: flex;
+}
+.column {
+	float: left;
+	width: 50%;
+	min-width: 24%;
+	display: inline-block;
+}
 
-    
+.column-browse {
+	float: left;
+	margin: 0 auto;
+	width: 50%;
+	box-sizing: border-box;
+}
 
+.card-box {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	text-align: center;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+.card-box-border {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	text-align: center;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	border: solid;
+	border-width: thin;
+}
+
+.products-categories {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 28px;
+}

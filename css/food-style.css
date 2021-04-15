@@ -1,19 +1,22 @@
 .header {
     display: inline-block;
-    top: 0px;
-    left: 0px;
     background-color: #9acd32;
     width: 100%;
 }
 
-.header-navbar a {
+.header-navber {
     float: right;
+}
+
+.header-navbar a {
+    float: left;
     font-family: "Helvetica", sans-serif;
     padding: 14px 14px;
     text-align: center;
     background-color: #6fc6ee;
     color: #000000;
     font-size: 17px;
+    text-decoration: none;
 }
 
 .header-navbar a:hover {
@@ -36,7 +39,7 @@
 .footer p {
     font-family: "Helvetica", sans-serif;
     margin: auto;
-	text-align: center;
+    text-align: center;
 }
 
 .footer-navbar a {
@@ -62,9 +65,9 @@
 	padding-bottom: 25px;
 	display: inline-block;
 	box-sizing: border-box;
-    overflow-y: auto;
+	overflow-y: auto;
 	flex-direction: row;
-    display: flex;
+	display: flex;
 	width: 100%;
 }
 
@@ -120,7 +123,6 @@
     background-color: #6fc6ee;
     color: #000000;
     font-family: "Helvetica", sans-serif;
-    font-size: 17px;
     text-align: center;
     overflow: hidden;
   }
@@ -169,7 +171,11 @@
 
 .pptos {
 	border-style: solid;
-    font-family: "Helvetica", sans-serif;
+    	font-family: "Helvetica", sans-serif;
 	padding: 10px;
 	background-color: #fffdd0;
+}
+
+.pptos a {
+	text-decoration: none;
 }

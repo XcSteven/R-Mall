@@ -99,9 +99,15 @@
 	display: inline-block;
 }
 
+.list-browse {
+	float: left;
+	padding: 15px 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+
 .column-browse {
 	float: left;
-	margin: 0 auto;
 	width: 50%;
 	box-sizing: border-box;
 }

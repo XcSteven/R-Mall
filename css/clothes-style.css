@@ -16,12 +16,13 @@
    	width: auto;
 }
 .header-navbar a {
-    	float: left;
-    	display: block;
-    	color: #dc143c;
-    	padding-top: 20px;
-    	font-weight: bold;
-    	padding-right: 28px;
+    float: left;
+    display: inline-block;
+    color: #dc143c;
+	border: solid;
+	padding: 6px;
+	margin: 0 2px;
+    font-weight: bold;
 	text-decoration: none;
 	font-family: "Helvetica", sans-serif;
 }
@@ -89,11 +90,12 @@
   }
   
 .dropdown .dropbtn {
-    	float: left;
-    	color: #dc143c;
-    	padding-top: 20px;
-    	font-weight: bold;
-    	padding-right: 28px;
+    float: left;
+    color: #dc143c;
+	padding: 6px;
+	margin: 0 2px;
+	border: solid;
+    font-weight: bold;
 	text-decoration: none;
 	font-family: "Helvetica", sans-serif;
   }

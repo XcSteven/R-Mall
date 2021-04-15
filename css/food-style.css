@@ -120,21 +120,22 @@
 }
 
 .dropdown {
-    float: right;
+    float: left;
     background-color: #6fc6ee;
     color: #000000;
     font-family: "Helvetica", sans-serif;
     text-align: center;
     overflow: hidden;
+	font-size: 17px;
   }
   
 .dropbtn {
-   font-size: 16px; 
+   font-size: 17px; 
    border: none;
    outline: none;
    color: #000000;
    background-color: #6fc6ee;
-   padding: 14px 16px;
+   padding: 14px 14px;
    font-family: "Helvetica", sans-serif;
    margin: 0;
 }

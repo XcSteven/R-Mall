@@ -126,16 +126,15 @@
     font-family: "Helvetica", sans-serif;
     text-align: center;
     overflow: hidden;
-	font-size: 17px;
   }
   
 .dropbtn {
-   font-size: 17px; 
+   font-size: 16px; 
    border: none;
    outline: none;
    color: #000000;
    background-color: #6fc6ee;
-   padding: 14px 14px;
+   padding: 14px 16px;
    font-family: "Helvetica", sans-serif;
    margin: 0;
 }
@@ -171,10 +170,29 @@
     display: block;
 }
 
+.form {
+    margin: 10px 100px;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.form h1 {
+    text-align: center;
+    font-family: "Helvetica", sans-serif;
+    font-size: 40px;
+}
+
+.form textarea {
+	resize: none;
+	width: 100%;
+}
+
 .pptos {
 	border-style: solid;
-    	font-family: "Helvetica", sans-serif;
+    font-family: "Helvetica", sans-serif;
 	padding: 10px;
+    margin:10px 100px;
 	background-color: #fffdd0;
 }
 

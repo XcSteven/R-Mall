@@ -8,6 +8,7 @@
 
 .header-navbar a {
     float: right;
+    font-family: "Helvetica", sans-serif;
     padding: 14px 14px;
     text-align: center;
     background-color: #6fc6ee;
@@ -29,12 +30,18 @@
     display: inline-block;
     bottom: 0px;
     right: 0px;
-    background-color: #c5bdbd;
     width: 100%;
 }
 
+.footer p {
+    font-family: "Helvetica", sans-serif;
+    margin: auto;
+	text-align: center;
+}
+
 .footer-navbar a {
-    float: left;
+    font-family: "Helvetica", sans-serif;
+    float: right;
     padding: 14px 14px;
     text-align: center;
     background-color:transparent;
@@ -48,7 +55,6 @@
 }
 
 .footer-navbar a:active {
-    background-color: #808080;
     color: #ff7f50;
 }
 
@@ -56,14 +62,17 @@
 	padding-bottom: 25px;
 	display: inline-block;
 	box-sizing: border-box;
+    overflow-y: auto;
+	flex-direction: row;
+    display: flex;
 	width: 100%;
 }
 
 .title {
 	float: left;
-	width: 20%;
+	width: auto;
 	border-style: solid;
-	margin: 0 10px;
+	margin: 10px 5px;
 	box-sizing: border-box;
 	padding: 0 16px;
 	font-size: 12px;
@@ -74,15 +83,93 @@
 }
 
 .column {
-	float: left;
-	width: 20%;
+	display: inline-block;
+	width: 40%;
+    min-width: 25%;
 	padding: 0 20px;
 }
 
+.column-browse {
+	float: left;
+	margin: 0 auto;
+	width: 50%;
+	box-sizing: border-box;
+}
+
 .card-box {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 8px 0 #000000;
 	padding: 10px;
 	text-align: center;
 	background-color: #d0dbd1;
 	box-sizing: border-box;
+    overflow: auto;
+}
+
+.card-box-border {
+	box-shadow: 0 4px 8px 0 #000000;
+	text-align: center;
+    padding: 10px;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	border: solid;
+	border-width: thin;
+}
+
+.dropdown {
+    float: right;
+    background-color: #6fc6ee;
+    color: #000000;
+    font-family: "Helvetica", sans-serif;
+    font-size: 17px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+.dropbtn {
+   font-size: 16px;  
+   border: none;
+   outline: none;
+   color: #000000;
+   background-color: #6fc6ee;
+   padding: 14px 16px;
+   font-family: "Helvetica", sans-serif;
+   margin: 0;
+}
+  
+.dropdown:hover {
+    background-color: #dc143c;
+    color: #ffff00;
+} 
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #dc143c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #000000;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #dc143c;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.pptos {
+	border-style: solid;
+    font-family: "Helvetica", sans-serif;
+	padding: 10px;
+	background-color: #fffdd0;
 }

@@ -225,3 +225,47 @@
 .pptos a {
 	text-decoration: none;
 }
+.abtus-content {
+	width: 95%;
+	margin: auto;
+	float: center;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.abtus-content h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.abtus-content p {
+	text-indent: 5%;
+}
+.profile {
+	width: 100%;
+	float: left;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+.prof-column {
+	float: left;
+	margin: auto;
+	display: inline-block;
+}
+
+.prof-card {
+	float: center;
+	border: solid;
+	border-color: #d63c2d;
+	background-color: #ffa5a5;
+	width: 96.5%;
+	margin: auto;
+	text-align: center;
+}
+
+.prof-card img {
+	display: block;
+	margin: auto;
+}

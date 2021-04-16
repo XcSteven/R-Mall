@@ -69,7 +69,7 @@
 
 .products{
     	font-family: Georgia, 'Times New Roman', Times, serif;
-		color: #631717;
+		color: #7e1616;
     	text-align: center;
 }
 .products a{
@@ -130,7 +130,6 @@
 .products-general {
     	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     	color: #000000;
-    	text-align: left;
 }
 
 .list {
@@ -269,3 +268,29 @@
 	display: block;
 	margin: auto;
 }
+
+.pdetail{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin: 100px 250px 10px;
+	text-align: center;
+}
+
+.button{
+	background-color:  #7e1616;
+	color: #ffffff;
+  	border: none;
+  	padding: 15px 32px;
+	margin: 8px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	cursor: pointer;
+  	float: left;
+	border-radius: 8px;
+}
+.button a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+

@@ -1,27 +1,28 @@
+.header {
+	float: left;
+	padding-bottom: 12px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	}
 
 .header img {
 	border: solid;
 }
 
 .header-navbar a {
-	background-color: #4d4b4b;
-    display: block;
-	color: #ffffff;
-	border: solid;
-	margin: 0 2px;
-    font-weight: bold;
 	text-decoration: none;
-	font-family: "Helvetica", sans-serif;
+	border-style: solid;
+	color: #000000;
+	background-color: #ffffff;
 }
 
 .header-navbar a:hover {
-		background-color: #ffffff;
-    	color: #0d1e69;
+	color: #1338be;
 }
 
 .header-navbar a.active {
-		background-color: #ffffff;
-    	color: #b92e2e;
+	color: #b22222;
 }
 
 .selectlist {
@@ -31,8 +32,8 @@
 }
  
 .selectlist .dropbtn {
-	background-color: #4d4b4b;
-    color: #ffffff;
+	background-color: #ffffff;
+    color: #000000;
 	padding: 6px;
 	margin: 0 2px;
 	border: solid;
@@ -52,7 +53,7 @@
 .selectlist-content a {
     	float: none;
     	font-size: 12px;
-    	color: #ffffff;
+    	color: #000000;
     	text-decoration: none;
     	display: block;
     	text-align: left;
@@ -276,7 +277,7 @@
   	float: left;
 	border-radius: 8px;
 }
-.button a{
+.button a {
 	text-decoration: none;
 	color: #ffffff;
 }
@@ -356,14 +357,6 @@
 		width: 250px;
 	}
 	
-	.header {
-		float: left;
-		padding-bottom: 12px;
-		top: 0;
-		left: 0;
-		width: 100%;;
-	}
-	
 	.header-navbar {
 		float: right;
 		right: 0;
@@ -377,7 +370,7 @@
 		border: solid;
 		padding: 6px;
 		margin: 0 2px;
-		font-size: 16px;
+		font-size: 18px;
 	}
 	
 	.footer-navbar {
@@ -418,7 +411,7 @@
 		padding: 6px;
 		margin: 0 2px;
 		border: solid;
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	.selectlist-content {
@@ -526,8 +519,9 @@
 		margin: auto;
 	}
 	
-	.pdetail{
-		margin: 100px 250px 10px;
+	.pdetail {
+		margin: auto;
+		font-size: 22px;
 	}
 	
 	.button{
@@ -564,13 +558,6 @@
 		height: 100px;
 		width: 200px;
 	}
-	.header {
-		float: left;
-		padding-bottom: 12px;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
 	
 	.header-navbar {
 		float: right;
@@ -580,12 +567,12 @@
 		width: auto;
 	}
 	
-	.header-navbar a, .selectlist-content a {
+	.header-navbar a, .dropdown-content a {
 		float: left;
 		border: solid;
 		padding: 4px;
 		margin: 0 2px;
-		font-size: 14px;
+		font-size: 16px;
 
 	}
 	
@@ -610,24 +597,25 @@
 		text-align: center;	
 	}
 	
-	.selectlist {
+	.dropdown {
 		float: left;
 		overflow: hidden;
 	}
 	
-	.selectlist .dropbtn {
-		padding: 3px;
+	.dropdown .dropbtn {
+		padding: 4px;
 		margin: 0 2px;
 		border: solid;
+		font-size: 16px;
 	}
 
-	.selectlist-content {
+	.dropdown-content {
 		position: absolute;
 		min-width: 160px;
 		z-index: 1;
 	}
 	  
-	.selectlist-content a {
+	.dropdown-content a {
 		float: none;
 		font-size: 14px;
 	}
@@ -709,7 +697,7 @@
 	}
 	
 	.pdetail {
-		margin: 80px 20px 10px;
+		margin: auto;
 		font-size: 20px;
 	}
 	
@@ -719,19 +707,6 @@
 		margin: 8px;
 		float: left;
 		border-radius: 8px;
-	}
-
-	.nav-menu-bar {
-		float: right;
-		right: 0;
-		top: 0;
-		position: fixed;
-		width: auto;
-	}
-	
-	.nav-menu-bar a {
-		font-size: 22px;
-		padding: 0 12px;
 	}
 	
 	.bottom-nav-bar a {
@@ -800,7 +775,7 @@
 		padding: 0 12px;
 	}
 	
-	.pcard-box {
+	.card-box {
 		padding: 8px;
 	}
 	
@@ -879,6 +854,11 @@
 	.footer-stick p {
 		font-size: 14px;
 		padding-bottom: 20px;
+	}
+	
+	.pdetail {
+		margin: auto;
+		font-size: 20px;
 	}
 	
 }

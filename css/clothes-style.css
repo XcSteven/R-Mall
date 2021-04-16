@@ -37,7 +37,6 @@
 .selectlist .dropbtn {
 	background-color: #ffe989;
     color: #000000;
-	padding: 4px;
 	border: solid;
     font-weight: bold;
 	text-decoration: none;
@@ -53,12 +52,10 @@
   }
   
 .selectlist-content a {
-    	float: none;
-    	font-size: 12px;
     	color: #000000;
     	text-decoration: none;
     	display: block;
-    	text-align: left;
+    	text-align: center;
   }
   
 .selectlist:hover .selectlist-content {
@@ -415,17 +412,6 @@
 		border: solid;
 		font-size: 18px;
 	}
-
-	.selectlist-content {
-		position: absolute;
-		min-width: 160px;
-		z-index: 1;
-	}
-	  
-	.selectlist-content a {
-		float: none;
-		font-size: 16px;
-	}
 	
 	.products-general {
 		font-size: 16px;
@@ -609,17 +595,6 @@
 		margin: 0 2px;
 		border: solid;
 		font-size: 16px;
-	}
-
-	.selectlist-content {
-		position: absolute;
-		min-width: 160px;
-		z-index: 1;
-	}
-	  
-	.selectlist-content a {
-		float: none;
-		font-size: 14px;
 	}
 	
 	.products{

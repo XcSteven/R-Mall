@@ -14,7 +14,10 @@
 	text-decoration: none;
 	border-style: solid;
 	color: #000000;
-	background-color: #ffffff;
+	background-color: #ffe989;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: "Helvetica", sans-serif;
 }
 
 .header-navbar a:hover {
@@ -32,7 +35,7 @@
 }
  
 .selectlist .dropbtn {
-	background-color: #ffffff;
+	background-color: #ffe989;
     color: #000000;
 	padding: 6px;
 	margin: 0 2px;
@@ -274,7 +277,7 @@
   	text-decoration: none;
   	display: block;
   	cursor: pointer;
-  	float: left;
+  	float: right;
 	border-radius: 8px;
 }
 .button a {
@@ -527,7 +530,7 @@
 	.button{
 		padding: 15px 32px;
 		margin: 8px;
-		float: left;
+		float: right;
 		border-radius: 8px;
 	}
 	.nav-menu-bar {
@@ -567,7 +570,7 @@
 		width: auto;
 	}
 	
-	.header-navbar a, .dropdown-content a {
+	.header-navbar a, .selectlist-content a {
 		float: left;
 		border: solid;
 		padding: 4px;
@@ -597,25 +600,25 @@
 		text-align: center;	
 	}
 	
-	.dropdown {
+	.selectlist {
 		float: left;
 		overflow: hidden;
 	}
 	
-	.dropdown .dropbtn {
+	.selectlist .dropbtn {
 		padding: 4px;
 		margin: 0 2px;
 		border: solid;
 		font-size: 16px;
 	}
 
-	.dropdown-content {
+	.selectlist-content {
 		position: absolute;
 		min-width: 160px;
 		z-index: 1;
 	}
 	  
-	.dropdown-content a {
+	.selectlist-content a {
 		float: none;
 		font-size: 14px;
 	}
@@ -705,7 +708,7 @@
 		font-size: 22px;
 		padding: 15px 32px;
 		margin: 8px;
-		float: left;
+		float: right;
 		border-radius: 8px;
 	}
 	

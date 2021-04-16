@@ -12,7 +12,7 @@ Our website is called "R-Mall", with the two stores being "R-Clothes" and "R-Foo
 3. https://favicon.io/favicon-generator/ (Website's icon)
 4. https://www.freelogodesign.org/ (All logos)
 5. https://codepen.io/Zillionx/pen/xwOxoW (Show input fields on radio button selection)(mall-register.html)
-6. https://dichothue.com.vn/ (food images and information)
+6. https://dichothue.com.vn/ (images and products' info for R-Food)
 7. https://www.farfetch.com (images and products' info for R-Clothes)
 # Explanation:
 - mall-browse.html: </br>

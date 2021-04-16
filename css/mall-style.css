@@ -390,6 +390,35 @@
 	text-indent: 5%;
 }
 
+.button {
+    background-color: #c6f861;
+    border: none;
+    color: #000000;
+    padding: 15px 32px;
+	display:inline-block;
+	margin: 10px auto;
+    border-style: solid;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+	cursor: pointer;
+}
+
+.grid {
+	float: left;
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 15px;
+}
+
+.container {
+	display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
 @media screen and (min-width: 1024px) {
 	.header img {
 		height: 125px;

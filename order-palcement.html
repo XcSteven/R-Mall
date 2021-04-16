@@ -10,7 +10,7 @@
 	<body>
 		<body style="background-color:#F5F5DC">
 		<header class="header">
-			<img src="images/logo-food.png" style="border-style: solid" title="Home" height="125" width="250">
+			<a href="food-home.html"><img src="images/logo-food.png" style="border-style: solid" title="Home" height="125" width="250"></a>
 			<nav class="header-navbar">
 				<a href="index.html">R-Mall</a>
 				<a href="food-home.html">Food Store</a>
@@ -39,48 +39,48 @@
                     <p style="font-size: 30px;"><b>Sweet Potato</b></p>
                     <p>$1.5/kg</p>
                     <label for="amount"><b>Amount:</b></label>
-                    <input type="number" id="amount" name="amount" required>
+                    <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
                 <div class="card-box">
                     <img src="images/cherry.jpg" alt="cherry" style="max-width: 75%; height: auto">
                     <p style="font-size: 30px;"><b>Cherry</b></p>
                     <p>$20/kg</p>
                     <label for="amount"><b>Amount:</b></label>
-                    <input type="number" id="amount" name="amount" required>
+                    <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
                 <div class="card-box">
                     <img src="images/kiwi.jpg" alt="kiwi" style="max-width: 75%; height: auto">
                     <p style="font-size: 30px;"><b>Kiwi</b></p>
                     <p>$1.5/kg</p>
                     <label for="amount"><b>Amount:</b></label>
-                    <input type="number" id="amount" name="amount" required>
+                    <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
                 <div class="card-box">
                     <img src="images/new1.jpg" alt="Patterned leggings" style="max-width: 75%; height: auto">
                     <p style="font-size: 30px;"><b>Adidas Three-striped leggings</b></p>
                     <p>$42</p>
                     <label for="amount"><b>Amount:</b></label>
-                    <input type="number" id="amount" name="amount" required>
+                    <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
                 <div class="card-box">
                     <img src="images/new2.jpg" alt="Polo shirt" style="max-width: 75%; height: auto">
                     <p style="font-size: 30px;"><b>Palm Angels Logo-print shirt</b></p>
                     <p>$411</p>
                     <label for="amount"><b>Amount:</b></label>
-                    <input type="number" id="amount" name="amount" required>
+                    <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
                 <div class="card-box">
                     <img src="images/new4.jpg" alt="Midi skirt" style="max-width: 75%; height: auto">
                     <p style="font-size: 30px;"><b>MM6 Maison Margiela Two-tone midi denim skirt</b></p>
                     <p>$388</p>
                     <label for="amount"><b>Amount:</b></label>
-                    <input type="number" id="amount" name="amount" required>
+                    <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
             </div>
         </div>
         <br>
         <label for="total-amount" style="margin-left: 500px; font-size: 20px;"><b>Total amount order:</b></label>
-        <input type="number" id="total-amount" name="total-amount" required>
+        <input type="number" id="total-amount" name="total-amount" min="1" max="99" required>
         <br>
         <button class="button" style="margin-left: 500px; margin-top: 20px"><b>Continue Shopping</b></button>
         <a href="mall-thankyou-buying.html" class="button"><b>Order</b></a>

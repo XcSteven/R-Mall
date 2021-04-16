@@ -3,57 +3,81 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Product Detail</title>
-		<link rel="stylesheet" href="css/food-style.css">
+		<title>Product detail</title>
+		<link rel="stylesheet" href="css/mall-style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
 	</head>
 	<body>
-		<body style="background-color:#F5F5DC">
+		<body style="background-color:#f5f5dc">
 		<header class="header">
-			<a href="food-home.html"><img src="images/logo-food.png" style="border-style: solid" title="Home" height="125" width="250"></a>
-			<nav class="header-navbar">
-				<a href="index.html">R-Mall</a>
-				<a href="food-home.html">Food Store</a>
-				<a href="food-aboutus.html">About Us</a>
-				<div class="dropdown">
-					<div class="dropbtn">Products
-						<i class="fa fa-caret-down"></i>
-					</div>
-					<div class="dropdown-content">
-						<a href="food-category.html">Browse Products by Categories</a>
-						<a href="food-createdtime.html">Browse Products by Created Time</a>
-					</div>	
-				</div>
-				<a href="food-contact.html">Contact</a>				
-			</nav>			
+		<a href="index.html"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
+			<nav class="nav-menu-bar">
+				<a class="active" href="index.html">Home</a>
+				<a href="notin-mall-aboutus.html">About Us</a>
+				<a href="notin-mall-fees.html">Fees</a>
+				<a href="notin-mall-myaccount.html">Account</a>
+				<a href="notin-mall-browse.html">Browse</a>
+				<a href="notin-mall-faqs.html">FAQs</a>
+				<a href="notin-mall-contact.html">Contact</a>
+			</nav>
 		</header>
 		<hr>
         <div class="main">
             <div class="title">
-				<h1>New Products</h1>
+				<h1>Fruit</h1>
 			</div>
             <div class="list">
-                <img src="images/cherry.jpg" style="float: left; width: 30%; margin-right: 10px; margin-bottom: 1px">
-                <img src="images/cherry1.jpg" style="float: left; width: 30%; margin-right: 10px; margin-bottom: 1px">
-                <img src="images/cherry2.jpg" style="float: left; width: 30%; margin-right: 10px; margin-bottom: 1px">
+                <img src="images/cherry.jpg" style="float: left; width: 33.33%; margin: auto; padding: 12px">
+                <img src="images/cherry1.jpg" style="float: left; width: 33.33%; margin: auto; padding: 12px">
+                <img src="images/cherry2.jpg" style="float: left; width: 33.33%; margin: auto; padding: 12px">
             </div>
-            <div class="box">
+            <div class="card-box">
                 <p style="font-size: 30px"><b>Cherry</b></p>
                 <p>$20/kg</p>
                 <p>Amazing fruit with sour flavor, a symbol of love</p>
                 <p>Date: 31/03/2021</p>
             </div>
             <br>
-            <button class="button"><b>Add</b></button>
-            <a href="store-ordplacement.html" class="button"><b>Buy now</b></a>
+			<div class="container">
+				<button class="button"><b>Add</b></button>
+            	<a href="store-ordplacement.html" class="button"><b>Buy now</b></a>
+			</div>
         </div>
-        <hr>
-        <footer class="footer">
-			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/food-home.html - All Rights Reserved.</p>
-			<nav class="footer-navbar">
-				<a href="food-tos.html">Term of Service</a>
-				<a href="food-pprivacy.html">Privacy Policy</a>	
+		<hr>
+		<div class="title">
+			<h1>Recommended Products</h1>
+		</div>
+		<div class="list">
+			<div class="column">
+				<div class="card-box">
+					<a href="food-detail.html"><img src="images/kiwi.jpg" alt="kiwi" style="max-width:75%; height: auto"></a>
+					<a href="food-detail.html"><p><b>Kiwi</b></p></a>
+					<p>$8.5/kg</p>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card-box">
+					<a href="food-detail.html"><img src="images/envy-apple.jpg" alt="envy-apple" style="max-width:75%; height: auto"></a>
+					<a href="food-detail.html"><p><b>Envy Apple</b></p></a>
+					<p>$8.5/kg</p>
+				</div>
+			</div>
+			<div class="column">
+				<div class="card-box">
+					<a href="food-detail.html"><img src="images/french-strawberry.jpg" alt="french-strawberry" style="max-width:75%; height: auto"></a>
+					<a href="food-detail.html"><p><b>French Strawberry</b></p></a>
+					<p>$8.5/kg</p>
+				</div>
+			</div>
+		</div>
+        <hr style="visibility:hidden">
+		<hr>
+		<footer class="footer">
+			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
+			<nav class="bottom-nav-bar">
+				<a href="notin-mall-tos.html">Terms of Service</a>
+				<a href="notin-mall-ppolicy.html">Privacy Policy</a>
 			</nav>
-        </footer>
+		</footer>
 	</body>
 </html>

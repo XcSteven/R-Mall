@@ -10,22 +10,22 @@
 	<body>
 		<body style="background-color:#F5F5DC">
 		<header class="header">
-			<a href="food-home.html"><img src="images/logo-food.png" style="border-style: solid" title="Home" height="125" width="250"></a>
+			<a href="food-home.html"><img src="images/logo-food.png" alt="logo-food"></a>
 			<nav class="header-navbar">
-				<a href="index.html">R-Mall</a>
+				<a href="in-mall-contact.html">Mall Contact</a>
 				<a href="food-home.html">Food Store</a>
-				<a href="food-aboutus.html">About Us</a>
+                <a href="food-contact.html">Store Contact</a>
 				<div class="dropdown">
 					<div class="dropbtn">Products
 						<i class="fa fa-caret-down"></i>
 					</div>
 					<div class="dropdown-content">
 						<a href="food-category.html">Browse Products by Categories</a>
-						<a href="food-createdtime.html">Browse Products by Created Time</a>
+						<a class="active" href="food-createdtime.html">Browse Products by Created Time</a>
 					</div>	
 				</div>
-				<a class="active" href="food-contact.html">Contact</a>				
-			</nav>			
+                <a href="food-aboutus.html">About Us</a>				
+			</nav>					
 		</header>
 		<hr>
         <div class="form">
@@ -70,8 +70,10 @@
                 <p>Message</p>
                 <textarea id="mess" name="mess" rows="4" placeholder="Please write here..."></textarea>
                 <br>
-                <input type="reset" value="Clear">
-                <a href="food-thankyou.html"><input type="button" value="Send"></a>
+                <div class="container">
+                    <button type="reset" class="button"><b>Clear</b></button>
+                    <a href="food-thankyou.html" class="button"><b>Send</b></a>
+                </div>
             </form>
         </div>
         <hr>

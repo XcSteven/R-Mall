@@ -13,24 +13,24 @@
 }
 
 .head-navbar {
-    float: right;
+	float: right;
 	right: 0;
 	top: 0;
 	position: fixed;
-   	width: auto;
+	width: auto;
 }
 
 .head-navbar a {
-    float: left;
+	float: left;
 	display: block;
 	border: solid;
 	margin: 0 2px;
     padding: 14px;
-    text-align: center;
     background-color: #6fc6ee;
     color: #000000;
     font-size: 17px;
     text-decoration: none;
+	width: auto;
 }
 
 .head-navbar a:hover {
@@ -116,6 +116,14 @@
 	box-sizing: border-box;
 	border: solid;
 	border-width: thin;
+}
+
+.box h1 {
+	font-size: 22px;
+}
+
+.box a {
+	text-decoration: none;
 }
 
 .dropdown {
@@ -290,14 +298,6 @@
 		width: 250px;
 	}
 	
-	.head-navbar {
-		float: right;
-		right: 0;
-		top: 0;
-		position: fixed;
-		width: auto;
-	}
-	
 	.head-navbar a {
 		font-size: 22px;
 		padding: 0 12px;
@@ -377,14 +377,6 @@
 	.head img {
 		height: 100px;
 		width: 200px;
-	}
-	
-	.head-navbar {
-		float: right;
-		right: 0;
-		top: 0;
-		position: fixed;
-		width: auto;
 	}
 	
 	.head-navbar a {
@@ -486,22 +478,20 @@
 	}
 	
 	.head-navbar {
-		float: right;
-		right: 0;
-		top: 0;
-		position: fixed;
 		width: 20%;	
 	}
 	
 	.head-navbar a {
+		float: left;
 		font-size: 14px;
 		text-align: center;
 		margin-bottom: 4px;
 		display: block;
 		text-decoration: none;
 		padding: 8px;
+		width: 100%;
 	}
-	
+
 	.foot-navbar a {
 		font-size: 14px;
 		padding: 0 6px;
@@ -542,12 +532,18 @@
 		font-size: 10px;
 	}
 
+	.dropbtn {
+		padding-bottom: 5px;
+	}
+
 	.dropdown{
 		padding-bottom: 5px;
+		width: 100%;
 	}
 
 	.dropdown .dropbtn {
 		font-size: 14px;
+		width: 100%;
 	}
 
 	.form {

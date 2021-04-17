@@ -492,6 +492,11 @@
 		padding: 0 6px;
 	}
 	
+	.footer p {
+		font-size: 10px;
+		padding-bottom: 12px;
+	}
+	
 	.title {
 		font-size: 8px;
 	}

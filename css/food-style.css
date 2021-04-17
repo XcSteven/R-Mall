@@ -24,9 +24,9 @@
 	float: left;
 	display: block;
 	border: solid;
-    background-color: #6fc6ee;
-    color: #000000;
-    text-decoration: none;
+	background-color: #6fc6ee;
+	color: #000000;
+	text-decoration: none;
 	width: auto;
 }
 
@@ -87,7 +87,7 @@
 .column {
 	display: inline-block;
 	width: 40%;
-    min-width: 25%;
+	min-width: 25%;
 	padding: 0 20px;
 }
 
@@ -103,7 +103,7 @@
 	text-align: center;
 	background-color: #d0dbd1;
 	box-sizing: border-box;
-    overflow: auto;
+	overflow: auto;
 }
 
 .box-border {
@@ -135,8 +135,6 @@
    outline: none;
    color: #000000;
    background-color: #6fc6ee;
-   padding: 0 10px;
-   margin: 0 2px;
    border: solid;
 }
   
@@ -152,7 +150,6 @@
 .dropdown-content a {
     float: none;
     color: #000000;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -298,6 +295,7 @@
 	.head-navbar a {
 		font-size: 22px;
 		padding: 0 12px;
+		margin: 0 2px;
 	}
 	
 	.foot-navbar a {
@@ -379,6 +377,7 @@
 	.head-navbar a {
 		font-size: 18px;
 		padding: 0 10px;
+		margin: 0 2px;
 	}
 	
 	.foot-navbar a {
@@ -482,7 +481,7 @@
 	.head-navbar a {
 		font-size: 14px;
 		text-align: center;
-		margin-bottom: 4px;
+		margin-bottom: 2px;
 		display: block;
 		text-decoration: none;
 		width: 100%;
@@ -529,11 +528,13 @@
 	}
 
 	.dropbtn {
-		margin-bottom: 4px;
+		padding: 0 2px;
+		margin-bottom: 2px;
 	}
 
-	.dropdown{
-		margin-bottom: 4px;
+	.dropdown {
+		padding: 0 2px;
+		margin-bottom: 2px;
 		width: 100%;
 	}
 

@@ -273,7 +273,6 @@
   	text-decoration: none;
   	display: block;
   	cursor: pointer;
-  	float: right;
 	border-radius: 8px;
 }
 .button a {
@@ -515,7 +514,6 @@
 	.button{
 		padding: 15px 32px;
 		margin: 8px;
-		float: right;
 		border-radius: 8px;
 	}
 	.nav-menu-bar {
@@ -682,7 +680,6 @@
 		font-size: 22px;
 		padding: 15px 32px;
 		margin: 8px;
-		float: right;
 		border-radius: 8px;
 	}
 	

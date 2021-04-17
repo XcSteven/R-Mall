@@ -218,7 +218,7 @@
 }
 
 .grid {
-    margin: 20px 50px;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;

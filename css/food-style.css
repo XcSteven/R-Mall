@@ -291,7 +291,7 @@
 		width: 250px;
 	}
 	
-	.head-navbar a, dropdown-content a {
+	.head-navbar a, dropdown-content a, .dropbtn {
 		font-size: 22px;
 		padding: 0 12px;
 		margin: 0 2px;
@@ -373,7 +373,7 @@
 		width: 200px;
 	}
 	
-	.head-navbar a, dropdown-content a {
+	.head-navbar a, dropdown-content a, .dropbtn {
 		font-size: 18px;
 		padding: 0 10px;
 		margin: 0 2px;
@@ -477,7 +477,7 @@
 		float: right;
 	}
 	
-	.head-navbar a, dropdown-content a {
+	.head-navbar a, dropdown-content a, .dropbtn {
 		font-size: 14px;
 		text-align: center;
 		margin-bottom: 2px;

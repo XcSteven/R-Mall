@@ -30,7 +30,6 @@
 
 .footer {
 	float: left;
-	display: inline-block;
 	box-sizing: border-box;
 	width: 100%;
 }
@@ -42,7 +41,6 @@
 }
 .footer-stick {
 	float: left;
-	display: inline-block;
 	box-sizing: border-box;
 	width: 100%;
 	position: absolute;
@@ -91,12 +89,10 @@
 	border-color: #000000;
 	background-color: #028a0f;
 	color: #ffffff;
-	display: inline-block;
 }
 
 .column {
 	float: left;
-	display: inline-block;
 }
 
 .list-browse {
@@ -361,7 +357,6 @@
 .prof-column {
 	float: left;
 	margin: auto;
-	display: inline-block;
 }
 
 .prof-card {

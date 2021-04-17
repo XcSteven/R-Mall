@@ -127,7 +127,7 @@
     float: left;
     text-align: center;
     overflow: hidden;
-  }
+}
   
 .dropdown .dropbtn {
    border: none;
@@ -242,7 +242,6 @@
 .prof-column {
 	float: left;
 	margin: auto;
-	display: inline-block;
 }
 
 .prof-card {

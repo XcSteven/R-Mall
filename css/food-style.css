@@ -13,24 +13,21 @@
 }
 
 .head-navbar {
-    float: right;
+	float: right;
 	right: 0;
 	top: 0;
 	position: fixed;
-   	width: auto;
+	width: auto;
 }
 
 .head-navbar a {
-    float: left;
+	float: left;
 	display: block;
 	border: solid;
-	margin: 0 2px;
-    padding: 14px;
-    text-align: center;
-    background-color: #6fc6ee;
-    color: #000000;
-    font-size: 17px;
-    text-decoration: none;
+	background-color: #6fc6ee;
+	color: #000000;
+	text-decoration: none;
+	width: auto;
 }
 
 .head-navbar a:hover {
@@ -90,7 +87,7 @@
 .column {
 	display: inline-block;
 	width: 40%;
-    min-width: 25%;
+	min-width: 25%;
 	padding: 0 20px;
 }
 
@@ -106,7 +103,7 @@
 	text-align: center;
 	background-color: #d0dbd1;
 	box-sizing: border-box;
-    overflow: auto;
+	overflow: auto;
 }
 
 .box-border {
@@ -118,6 +115,14 @@
 	border-width: thin;
 }
 
+.box h1 {
+	font-size: 22px;
+}
+
+.box a {
+	text-decoration: none;
+}
+
 .dropdown {
     float: left;
     text-align: center;
@@ -125,13 +130,10 @@
   }
   
 .dropdown .dropbtn {
-   font-size: 22px; 
    border: none;
    outline: none;
    color: #000000;
    background-color: #6fc6ee;
-   padding: 0 10px;
-   margin: 0 2px;
    border: solid;
 }
   
@@ -147,7 +149,6 @@
 .dropdown-content a {
     float: none;
     color: #000000;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -290,17 +291,10 @@
 		width: 250px;
 	}
 	
-	.head-navbar {
-		float: right;
-		right: 0;
-		top: 0;
-		position: fixed;
-		width: auto;
-	}
-	
-	.head-navbar a {
+	.head-navbar a, dropdown-content a {
 		font-size: 22px;
 		padding: 0 12px;
+		margin: 0 2px;
 	}
 	
 	.foot-navbar a {
@@ -379,17 +373,10 @@
 		width: 200px;
 	}
 	
-	.head-navbar {
-		float: right;
-		right: 0;
-		top: 0;
-		position: fixed;
-		width: auto;
-	}
-	
-	.head-navbar a {
+	.head-navbar a, dropdown-content a {
 		font-size: 18px;
 		padding: 0 10px;
+		margin: 0 2px;
 	}
 	
 	.foot-navbar a {
@@ -486,22 +473,19 @@
 	}
 	
 	.head-navbar {
+		width: 20%;
 		float: right;
-		right: 0;
-		top: 0;
-		position: fixed;
-		width: 20%;	
 	}
 	
-	.head-navbar a {
+	.head-navbar a, dropdown-content a {
 		font-size: 14px;
 		text-align: center;
-		margin-bottom: 4px;
+		margin-bottom: 2px;
 		display: block;
 		text-decoration: none;
-		padding: 8px;
+		width: 100%;
 	}
-	
+
 	.foot-navbar a {
 		font-size: 14px;
 		padding: 0 6px;
@@ -542,12 +526,20 @@
 		font-size: 10px;
 	}
 
-	.dropdown{
-		padding-bottom: 5px;
+	.dropbtn {
+		padding: 0 2px;
+		margin-bottom: 2px;
+	}
+
+	.dropdown {
+		padding: 0 2px;
+		margin-bottom: 2px;
+		width: 100%;
 	}
 
 	.dropdown .dropbtn {
 		font-size: 14px;
+		width: 100%;
 	}
 
 	.form {

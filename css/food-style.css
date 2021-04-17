@@ -24,11 +24,8 @@
 	float: left;
 	display: block;
 	border: solid;
-	margin: 0 2px;
-    padding: 14px;
     background-color: #6fc6ee;
     color: #000000;
-    font-size: 17px;
     text-decoration: none;
 	width: auto;
 }
@@ -532,11 +529,11 @@
 	}
 
 	.dropbtn {
-		padding-bottom: 5px;
+		margin-bottom: 4px;
 	}
 
 	.dropdown{
-		padding-bottom: 5px;
+		margin-bottom: 4px;
 		width: 100%;
 	}
 

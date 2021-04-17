@@ -52,10 +52,12 @@
   }
   
 .selectlist-content a {
+		font-size: 12px;
     	color: #000000;
     	text-decoration: none;
     	display: block;
-    	text-align: center;
+    	text-align: left;
+		float: none;
   }
   
 .selectlist:hover .selectlist-content {
@@ -63,9 +65,9 @@
  }
 
 .footer-navbar {
-    	bottom: 0px;
-    	right: 0px;
-    	background-color:#c5bdbd;
+    bottom: 0px;
+    right: 0px;
+    background-color:#c5bdbd;
 	float: right;
 	position: fixed;
 }

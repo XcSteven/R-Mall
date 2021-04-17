@@ -2,17 +2,17 @@
 	font-family: "Helvetica", sans-serif;
 }
 
-.header {
+.head {
     display: inline-block;
     background-color: #9acd32;
     width: 100%;
 }
 
-.header img {
+.head img {
 	border: solid;
 }
 
-.header-navbar {
+.head-navbar {
     float: right;
 	right: 0;
 	top: 0;
@@ -20,7 +20,7 @@
    	width: auto;
 }
 
-.header-navbar a {
+.head-navbar a {
     float: left;
 	display: block;
 	border: solid;
@@ -33,33 +33,33 @@
     text-decoration: none;
 }
 
-.header-navbar a:hover {
+.head-navbar a:hover {
     background-color: #dc143c;
     color: #ffff00;
 }
 
-.footer {
+.foot {
     display: inline-block;
     bottom: 0px;
     right: 0px;
     width: 100%;
 }
 
-.footer p {
+.foot p {
     margin: auto;
     text-align: center;
 }
 
-.footer-navbar a {
+.foot-navbar a {
     float: right;
-    padding: 14px 14px;
+    padding: 14px;
     text-align: center;
     background-color:transparent;
     color: #000000;
     font-size: 17px;
 } 
 
-.footer-navbar a:hover {
+.foot-navbar a:hover {
     background-color: #dc143c;
     color: #ffff00;
 }
@@ -75,17 +75,16 @@
 }
 
 .title {
-	float: left;
-	width: auto;
 	border-style: solid;
-	margin: 10px 5px;
+	margin: 5px auto;
+	padding: 5px;
 	box-sizing: border-box;
-	padding: 0 16px;
 	font-size: 12px;
 	text-align: center;
 	border-color: #000000;
 	background-color: #67569b;
 	color: #ffffff;
+	display: inline-block;
 }
 
 .column {
@@ -102,7 +101,7 @@
 	box-sizing: border-box;
 }
 
-.card-box {
+.box {
 	box-shadow: 0 4px 8px 0 #000000;
 	text-align: center;
 	background-color: #d0dbd1;
@@ -110,7 +109,7 @@
     overflow: auto;
 }
 
-.card-box-border {
+.box-border {
 	box-shadow: 0 4px 8px 0 #000000;
 	text-align: center;
 	background-color: #fafafa;
@@ -204,17 +203,6 @@
 	text-decoration: none;
 }
 
-.box {
-    box-shadow: 0 4px 8px 0 #000000;
-    border-style: solid;
-	padding: 10px;
-    margin: 0 300px;
-	text-align: center;
-	background-color: #d0dbd1;
-	box-sizing: border-box;
-    overflow: auto;
-}
-
 .button {
     background-color: #c6f861;
     border: none;
@@ -289,13 +277,20 @@
 	text-indent: 5%;
 }
 
+#detail {
+	float: left;
+	width: 33.33%;
+	margin: auto;
+	padding: 12px;
+}
+
 @media screen and (min-width: 1024px) {
-	.header img {
+	.head img {
 		height: 125px;
 		width: 250px;
 	}
 	
-	.header-navbar {
+	.head-navbar {
 		float: right;
 		right: 0;
 		top: 0;
@@ -303,17 +298,17 @@
 		width: auto;
 	}
 	
-	.header-navbar a {
+	.head-navbar a {
 		font-size: 22px;
 		padding: 0 12px;
 	}
 	
-	.footer-navbar a {
+	.foot-navbar a {
 		font-size: 22px;
 		padding: 0 12px;
 	}
 	
-	.footer p {
+	.foot p {
 		font-size: 16px;
 	}
 	
@@ -331,7 +326,7 @@
 		padding: 0 20px;
 	}
 	
-	.card-box {
+	.box {
 		padding: 12px;
 	}
 
@@ -372,15 +367,19 @@
 	.abtus-content p {
 		font-size: 18px;
 	}
+
+	#detail {
+		padding: 12px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.header img {
+	.head img {
 		height: 100px;
 		width: 200px;
 	}
 	
-	.header-navbar {
+	.head-navbar {
 		float: right;
 		right: 0;
 		top: 0;
@@ -388,17 +387,17 @@
 		width: auto;
 	}
 	
-	.header-navbar a {
+	.head-navbar a {
 		font-size: 18px;
 		padding: 0 10px;
 	}
 	
-	.footer-navbar a {
+	.foot-navbar a {
 		font-size: 18px;
 		padding: 0 10px;
 	}
 	
-	.footer p {
+	.foot p {
 		font-size: 14px;
 		padding-bottom: 20px;
 	}
@@ -417,10 +416,22 @@
 		padding: 0 16px;
 	}
 	
-	.card-box {
+	.box {
 		padding: 10px;
 	}
 	
+	.box h1 {
+		font-size: 18px;
+	}
+
+	.box p {
+		font-size: 14px;
+	}
+
+	.box label {
+		font-size: 14px;
+	}
+
 	.dropdown-content {
 		font-size: 18px;
 	}
@@ -462,15 +473,19 @@
 	.abtus-content p {
 		font-size: 16px;
 	}
+
+	#detail {
+		padding: 12px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-	.header img {
+	.head img {
 		height: 75px;
 		width: 150px;
 	}
 	
-	.header-navbar {
+	.head-navbar {
 		float: right;
 		right: 0;
 		top: 0;
@@ -478,25 +493,25 @@
 		width: 20%;	
 	}
 	
-	.header-navbar a {
+	.head-navbar a {
 		font-size: 14px;
 		text-align: center;
 		margin-bottom: 4px;
 		display: block;
 		text-decoration: none;
-		padding: 5px;
+		padding: 8px;
 	}
 	
-	.footer-navbar a {
+	.foot-navbar a {
 		font-size: 14px;
 		padding: 0 6px;
 	}
-	
-	.footer p {
+
+	.foot p {
 		font-size: 10px;
 		padding-bottom: 12px;
 	}
-	
+
 	.title {
 		font-size: 8px;
 	}
@@ -511,10 +526,22 @@
 		padding: 0 12px;
 	}
 	
-	.card-box {
+	.box {
 		padding: 8px;
 	}
 	
+	.box h1 {
+		font-size: 12px;
+	}
+
+	.box p {
+		font-size: 10px;
+	}
+
+	.box label {
+		font-size: 10px;
+	}
+
 	.dropdown{
 		padding-bottom: 5px;
 	}
@@ -540,7 +567,7 @@
 	.form input[type=checkbox] {
 		width: 5.5%;
 	}
-	
+
 	.pptos {
 		margin: 15px auto;
 		width: 85%;
@@ -560,5 +587,9 @@
 	
 	.abtus-content p {
 		font-size: 14px;
+	}
+
+	#detail {
+		padding: 12px;
 	}
 }

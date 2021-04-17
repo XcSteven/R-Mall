@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Order Placement</title>
 		<link rel="stylesheet" href="css/mall-style.css">
+        <link rel="stylesheet" href="css/food-style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
 	</head>
 	<body>
@@ -24,48 +25,50 @@
 		<hr>
         <p style="margin: 0 auto; text-align: center;">* This is a sample piece of information</p>
         <div class="main">
-            <div class="title">
-				<h1>Order Placement</h1>
-			</div>
+            <div class="container">
+                <div class="title" style="align-items: center;">
+                    <h1>Order Placement</h1>
+                </div>
+            </div>
             <div class="grid">
-                <div class="card-box">
+                <div class="box">
                     <img src="images/sweet-potato.jpg" alt="sweet-potato" style="max-width: 75%; height: auto">
-                    <p style="font-size: 30px;"><b>Sweet Potato</b></p>
+                    <h1><b>Sweet Potato</b></h1>
                     <p>$1.5/kg</p>
                     <label for="amount"><b>Amount:</b></label>
                     <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
-                <div class="card-box">
+                <div class="box">
                     <img src="images/cherry.jpg" alt="cherry" style="max-width: 75%; height: auto">
-                    <p style="font-size: 30px;"><b>Cherry</b></p>
+                    <h1><b>Cherry</b></h1>
                     <p>$20/kg</p>
                     <label for="amount"><b>Amount:</b></label>
                     <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
-                <div class="card-box">
+                <div class="box">
                     <img src="images/kiwi.jpg" alt="kiwi" style="max-width: 75%; height: auto">
-                    <p style="font-size: 30px;"><b>Kiwi</b></p>
+                    <h1><b>Kiwi</b></h1>
                     <p>$1.5/kg</p>
                     <label for="amount"><b>Amount:</b></label>
                     <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
-                <div class="card-box">
+                <div class="box">
                     <img src="images/new1.jpg" alt="Patterned leggings" style="max-width: 75%; height: auto">
-                    <p style="font-size: 30px;"><b>Adidas Three-striped leggings</b></p>
+                    <h1><b>Adidas Three-striped leggings</b></h1>
                     <p>$42</p>
                     <label for="amount"><b>Amount:</b></label>
                     <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
-                <div class="card-box">
+                <div class="box">
                     <img src="images/new2.jpg" alt="Polo shirt" style="max-width: 75%; height: auto">
-                    <p style="font-size: 30px;"><b>Palm Angels Logo-print shirt</b></p>
+                    <h1><b>Palm Angels Logo-print shirt</b></h1>
                     <p>$411</p>
                     <label for="amount"><b>Amount:</b></label>
                     <input type="number" id="amount" name="amount" min="1" max="99" required>
                 </div>
-                <div class="card-box">
+                <div class="box">
                     <img src="images/new4.jpg" alt="Midi skirt" style="max-width: 75%; height: auto">
-                    <p style="font-size: 30px;"><b>MM6 Maison Margiela Two-tone midi denim skirt</b></p>
+                    <h1><b>MM6 Maison Margiela Two-tone midi denim skirt</b></h1>
                     <p>$388</p>
                     <label for="amount"><b>Amount:</b></label>
                     <input type="number" id="amount" name="amount" min="1" max="99" required>
@@ -76,7 +79,7 @@
         <div class="container">
             <label for="total-amount" style="font-size: 20px;"><b>Total amount order:</b></label>
             <input type="number" id="total-amount" name="total-amount" min="1" max="99" required>
-            <br>
+            <br><br>
             <button class="button"><b>Continue Shopping</b></button>
             <a href="mall-thankyou-buying.html" class="button"><b>Order</b></a>
         </div>

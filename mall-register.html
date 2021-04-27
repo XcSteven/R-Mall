@@ -6,14 +6,7 @@
 		<title>Register</title>
 		<link rel="stylesheet" href="css/mall-style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
-		<script>
-			function StoreownerCheck() {
-				if (document.getElementById('storeown').checked) {
-					document.getElementById('ifStoreown').style.display = 'block';
-				}
-				else document.getElementById('ifStoreown').style.display = 'none';
-			}
-		</script>
+		<script src="js/mall-javascript.js"></script>
 	</head>
 	<body>
 		<body style="background-color:#f5f5dc">
@@ -310,9 +303,9 @@
 					<option value="ZW">Zimbabwe</option>
 				</select>
 				<p>Select your account type:</p>
-				<input type="radio" onclick="javascript:StoreownerCheck();" id="shop" name="acctype" value="shop">
+				<input type="radio" onclick="StoreownerCheck();" id="shop" name="acctype" value="shop">
 				<label for="shop">Shopper</label>
-				<input type="radio" onclick="javascript:StoreownerCheck();" id="storeown" name="acctype" value="storeown">
+				<input type="radio" onclick="StoreownerCheck();" id="storeown" name="acctype" value="storeown">
 				<label for="storeown">Store Owner</label>
 				<div id="ifStoreown" style="display:none">
 					<label for="busname">Business Name</label>

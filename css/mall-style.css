@@ -2,11 +2,19 @@
 	font-family: "Helvetica", sans-serif;
 }
 
+.nav-menu-bar {
+	z-index: 1;
+}
+
 .nav-menu-bar a {
 	text-decoration: none;
 	border-style: solid;
 	color: #000000;
 	background-color: #ffffff;
+}
+
+.bottom-nav-bar {
+	z-index: 1;
 }
 
 .bottom-nav-bar a {
@@ -74,9 +82,8 @@
 	padding-bottom: 25px;
 	box-sizing: border-box;
 	width: 100%;
-	overflow-y: auto;
-	flex-direction: row;
 	display: flex;
+	animation: autoscroll 7s linear infinite forwards;
 }
 
 .title {
@@ -100,13 +107,6 @@
 	padding: 15px 0;
 	box-sizing: border-box;
 	width: 100%;
-}
-
-#detail {
-	float: left;
-	width: 33.33%;
-	margin: auto;
-	padding: 12px;
 }
 
 .column-browse {
@@ -374,6 +374,10 @@
 	margin: auto;
 }
 
+.prof-card img:hover {
+	opacity: 0.85;
+}
+
 .abtus-content {
 	width: 95%;
 	margin: auto;
@@ -392,34 +396,31 @@
 	text-indent: 5%;
 }
 
-.button {
-    background-color: #c6f861;
-    border: none;
-    color: #000000;
-    padding: 15px 32px;
-	display:inline-block;
-	margin: 10px auto;
-    border-style: solid;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-	cursor: pointer;
+.mod-win {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.5);
 }
 
-.grid {
-	float: left;
-    margin: 20px 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 15px;
+.mod-content {
+	background-color: #f5f5dc;
+	margin: auto;
+	border-style: solid;
+	width: 80%;
+	animation: fadein 1s;
 }
 
-.container {
-	display: block;
-    margin: 0 auto;
-    text-align: center;
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
 }
+
 
 @media screen and (min-width: 1024px) {
 	.header img {
@@ -466,9 +467,14 @@
 	.column-browse {
 		padding: 0 20px;
 	}
-	
-	#detail {
-		padding: 12px;
+
+	.list:hover {
+		animation-play-state: paused;
+	}
+
+	@keyframes autoscroll {
+		from {transform: translateX(0);}
+		to {transform: translateX(-66%);}
 	}
 
 	.card-box {
@@ -531,6 +537,14 @@
 	.abtus-content p {
 		font-size: 18px;
 	}
+	
+	.mod-win {
+		padding-top: 10%;
+	}
+	
+	.mod-content {
+		padding: 20px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -580,9 +594,14 @@
 	.column-browse {
 		padding: 0 16px;
 	}
-	
-	#detail {
-		padding: 8px;
+
+	.list:hover {
+		animation-play-state: paused;
+	}
+
+	@keyframes autoscroll {
+		from {transform: translateX(0);}
+		to {transform: translateX(-125%);}
 	}
 
 	.card-box {
@@ -645,6 +664,14 @@
 	.abtus-content p {
 		font-size: 16px;
 	}
+	
+	.mod-win {
+		padding-top: 20%;
+	}
+	
+	.mod-content {
+		padding: 16px;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -698,8 +725,9 @@
 		padding: 0 12px;
 	}
 	
-	#detail {
-		padding: 4px;
+	@keyframes autoscroll {
+		from {transform: translateX(0);}
+		to {transform: translateX(-205%);}
 	}
 
 	.card-box {
@@ -766,5 +794,13 @@
 	
 	.abtus-content p {
 		font-size: 14px;
+	}
+	
+	.mod-win {
+		padding-top: 30%;
+	}
+	
+	.mod-content {
+		padding: 12px;
 	}
 }

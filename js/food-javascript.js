@@ -1,3 +1,3 @@
 function PopUp() {  
-    alert("Thank you for buying!");
+    alert("Item has been added");
 }

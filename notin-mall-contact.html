@@ -1,33 +1,37 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Contact</title>
-		<link rel="stylesheet" href="css/mall-style.css">
-		<link rel="shortcut icon" href="images/favicon.ico">
-	</head>
-	<body>
-		<body style="background-color:#f5f5dc">
-		<header class="header">
-			<a href="index.html"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
-			<nav class="nav-menu-bar">
-				<a href="index.html">Home</a>
-				<a href="notin-mall-aboutus.html">About Us</a>
-				<a href="notin-mall-fees.html">Fees</a>
-				<a href="notin-mall-myaccount.html">Account</a>
-				<a href="notin-mall-browse.html">Browse</a>
-				<a href="notin-mall-faqs.html">FAQs</a>
-				<a class="active" href="notin-mall-contact.html">Contact</a>
-			</nav>
-		</header>
-		<hr>
-		<div class="form">
-		<h1>Contact</h1>
-			<form>
-				<label for="purpose">Contact Purpose</label>
-				<select id="purpose" name="purpose">
-					<option>Select a purpose</option>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/mall-style.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <body style="background-color:#f5f5dc">
+        <header class="header">
+            <a href="index.html"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
+            <nav class="nav-menu-bar">
+                <a href="index.html">Home</a>
+                <a href="notin-mall-aboutus.html">About Us</a>
+                <a href="notin-mall-fees.html">Fees</a>
+                <a href="notin-mall-myaccount.html">Account</a>
+                <a href="notin-mall-browse.html">Browse</a>
+                <a href="notin-mall-faqs.html">FAQs</a>
+                <a class="active" href="notin-mall-contact.html">Contact</a>
+            </nav>
+        </header>
+        <hr>
+        <div class="form">
+            <h1>Contact</h1>
+            <form id="Contactform" onsubmit="return custom_valid()">
+                <p class="error" id="form_submit_result"></p>
+                <label for="purpose">Contact Purpose</label>
+                <select id="purpose" name="purpose" required>
+					<option disabled selected>Select a purpose</option>
 					<option>Add a new store</option>
 					<option>Report a problem / Give feedback</option>
 					<option>Apply for employment</option>
@@ -38,45 +42,48 @@
 					<option>Request a refund</option>
 					<option>Other</option>
 				</select>
-				<label for="name">Name</label>
-				<input type="text" id="name" name="name" required>
-				<label for="email">Email</label>
-				<input type="email" id="email" name="email" required>
-				<label for="phone">Phone Number</label>
-				<input type="tel" id="phone" name="phone" required>
-				<p>Preferred contact method:</p>
-				<input type="radio" id="mail" name="method" value="Email">
-				<label for="mail">Email</label>
-				<input type="radio" id="phonenum" name="method" value="Phone">
-				<label for="phonenum">Phone</label>
-				<p>Contact days:</p>
-				<input type="checkbox" id="day1" name="mon" value="Monday">
-				<label for="mon">Monday</label>
-				<input type="checkbox" id="day2" name="tue" value="Tuesday">
-				<label for="tue">Tuesday</label>
-				<input type="checkbox" id="day3" name="wed" value="Wednesday">
-				<label for="wed">Wednesday</label>
-				<input type="checkbox" id="day4" name="thu" value="Thursday">
-				<label for="thu">Thursday</label>
-				<input type="checkbox" id="day5" name="fri" value="Friday">
-				<label for="fri">Friday</label>
-				<input type="checkbox" id="day6" name="sat" value="Saturday">
-				<label for="sat">Saturday</label>
-				<input type="checkbox" id="day7" name="sun" value="Sunday">
-				<label for="sun">Sunday</label>
-				<p>Message</p>
-				<textarea id="mess" name="mess" rows="4" placeholder="Leave a message for us"></textarea>
-				<input type="reset" value="Reset">
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-		<hr>
-		<footer class="footer">
-			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
-			<nav class="bottom-nav-bar">
-				<a href="notin-mall-tos.html">Terms of Service</a>
-				<a href="notin-mall-ppolicy.html">Privacy Policy</a>
-			</nav>
-		</footer>
-	</body>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" pattern=".{3,}" placeholder="At least 3 letters" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" pattern="^[^(\.)][a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}" placeholder="Enter your email address" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <p>Preferred contact method:</p>
+                <input type="radio" id="mail" name="method" value="Email" required>
+                <label for="mail">Email</label>
+                <input type="radio" id="phonenum" name="method" value="Phone">
+                <label for="phonenum">Phone</label>
+                <p>Contact days:</p>
+                <input type="checkbox" id="day1" class="day_check" value="Monday">
+                <label for="mon">Monday</label>
+                <input type="checkbox" id="day2" class="day_check" value="Tuesday">
+                <label for="tue">Tuesday</label>
+                <input type="checkbox" id="day3" class="day_check" value="Wednesday">
+                <label for="wed">Wednesday</label>
+                <input type="checkbox" id="day4" class="day_check" value="Thursday">
+                <label for="thu">Thursday</label>
+                <input type="checkbox" id="day5" class="day_check" value="Friday">
+                <label for="fri">Friday</label>
+                <input type="checkbox" id="day6" class="day_check" value="Saturday">
+                <label for="sat">Saturday</label>
+                <input type="checkbox" id="day7" class="day_check" value="Sunday">
+                <label for="sun">Sunday</label>
+                <p>Message:</p>
+                <textarea id="mess" name="mess" rows="4" placeholder="Leave a message for us (50-500 words allowed)" required></textarea>
+				<span id="letters"></span>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <hr>
+        <footer class="footer">
+            <p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
+            <nav class="bottom-nav-bar">
+                <a href="notin-mall-tos.html">Terms of Service</a>
+                <a href="notin-mall-ppolicy.html">Privacy Policy</a>
+            </nav>
+        </footer>
+		<script src="js/mall-contact.js"></script>
+    </body>
+
 </html>

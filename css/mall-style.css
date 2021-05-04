@@ -421,6 +421,15 @@
 	to {opacity: 1;}
 }
 
+.error {
+    color: #ff0000;
+}
+
+.error-border {
+    opacity: 0.5;
+	background-color: #ff0000;
+	color: #ffffff;
+}
 
 @media screen and (min-width: 1024px) {
 	.header img {

@@ -1,7 +1,3 @@
-function is_numeric(str) {
-	return /^\d+$/.test(str);
-}
-
 function checkbox_daycheck() {
 	flag = false;
 	a = document.getElementsByClassName("day_check");
@@ -12,6 +8,10 @@ function checkbox_daycheck() {
 		}
 	});
 	return flag;
+}
+
+function is_numeric(str) {
+	return /^\d+$/.test(str);
 }
 
 function valid_phone(phone) {
@@ -44,12 +44,12 @@ function valid_phone(phone) {
 }
 
 function custom_valid() {
-	phonenum = document.getElementById("phone");
-	pv = valid_phone(phonenum.value);
+	phone = document.getElementById("phone");
+	pv = valid_phone(phone.value);
 	if (!pv) {
-        phonenum.setCustomValidity("Phone number is invalid!");
-        phonenum.reportValidity();
-        phonenum.focus();
+        phone.setCustomValidity("Phone number is invalid!");
+        phone.reportValidity();
+        phone.focus();
         console.log("Phone is invalid");
         return false;
     }

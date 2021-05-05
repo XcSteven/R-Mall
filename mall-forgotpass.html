@@ -13,29 +13,30 @@
 			<a href="index.html"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
 			<nav class="nav-menu-bar">
 				<a href="index.html">Home</a>
-				<a href="notin-mall-aboutus.html">About Us</a>
-				<a href="notin-mall-fees.html">Fees</a>
-				<a href="notin-mall-myaccount.html">Account</a>
-				<a href="notin-mall-browse.html">Browse</a>
-				<a href="notin-mall-faqs.html">FAQs</a>
-				<a href="notin-mall-contact.html">Contact</a>
+				<a href="mall-notin-aboutus.html">About Us</a>
+				<a href="mall-notin-fees.html">Fees</a>
+				<a href="mall-notin-myaccount.html">Account</a>
+				<a href="mall-notin-browse.html">Browse</a>
+				<a href="mall-notin-faqs.html">FAQs</a>
+				<a href="mall-notin-contact.html">Contact</a>
 			</nav>
 		</header>
 		<hr>
 		<div class="fpass">
-			<form>
+			<form action="mall-done-forgotpass.html">
 				<label for="email">Enter your email</label>
-				<input type="email" id="email" name="email">
-				<a href="mall-done-forgotpass.html">Reset Password</a>
+				<input type="email" id="email" name="email" pattern="^[^(\.)][a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}" required>
+				<input type="submit" value="Reset Password" onclick="GetEmail()">
 			</form>
 		</div>
 		<footer class="footer-stick">
 		<hr>
 			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
 			<nav class="bottom-nav-bar">
-				<a href="notin-mall-tos.html">Terms of Service</a>
-				<a href="notin-mall-ppolicy.html">Privacy Policy</a>
+				<a href="mall-notin-tos.html">Terms of Service</a>
+				<a href="mall-notin-ppolicy.html">Privacy Policy</a>
 			</nav>
 		</footer>
+		<script src="js/mall-account.js"></script>
 	</body>
 </html>

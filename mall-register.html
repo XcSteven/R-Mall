@@ -24,30 +24,32 @@
 		<hr>
 		<div class="form">
 			<h1>Register Account</h1>
-			<form>
+			<form onsubmit="return custom_valid()">
 				<label for="email">Email</label>
-				<input type="email" id="email" name="email">
+				<input type="email" id="email" name="email" pattern="^[^(\.)][a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}" placeholder="Enter your email address" required>
 				<label for="phone">Phone Number</label>
-				<input type="tel" id="phone" name="phone">
+				<input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 				<label for="pass">Passsword</label>
-				<input type="password" id="pass" name="pass">
+				<input type="password" id="pass" name="pass" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])([a-zA-Z0-9!@#$%^&*]{8,20})" onkeyup="SamePassword();" placeholder="Enter your password" required>
+				<span id="message" style="float:right"></span>
+				<br>
 				<label for="rpass">Re-type Passsword</label>
-				<input type="password" id="rpass" name="rpass">
+				<input type="password" id="rpass" name="rpass" onkeyup="SamePassword();" placeholder="Re-type your password" required>
 				<label for="img">Profile Picture</label>
 				<input type="file" id="img" name="img">
 				<label for="fname">First Name</label>
-				<input type="text" id="fname" name="fname">
+				<input type="text" id="fname" name="fname" pattern=".{3,}" placeholder="Enter your first name (At least 3 letters)" required>
 				<label for="lname">Last Name</label>
-				<input type="text" id="lname" name="lname">
+				<input type="text" id="lname" name="lname" pattern=".{3,}" placeholder="Enter your last name (At least 3 letters)" required>
 				<label for="address">Address</label>
-				<input type="text" id="address" name="address">
+				<input type="text" id="address" name="address" pattern=".{3,}" placeholder="Enter your address (At least 3 letters)" required>
 				<label for="city">City</label>
-				<input type="text" id="city" name="city">
+				<input type="text" id="city" name="city" pattern=".{3,}" placeholder="Enter your city (At least 3 letters)" required>
 				<label for="zip">Zipcode</label>
-				<input type="tel" id="zip" name="zip" maxlength="6">
+				<input type="tel" id="zip" name="zip" pattern=".{4,6}" placeholder="Enter your zipcode (4-6 digits)" required>
 				<label for="country">Country</label>
 				<select id="country" name="country">
-					<option>Select Country</option>
+					<option disabled selected>Select Country</option>
 					<option value="AF">Afghanistan</option>
 					<option value="AX">Aland Islands</option>
 					<option value="AL">Albania</option>
@@ -302,18 +304,18 @@
 					<option value="ZW">Zimbabwe</option>
 				</select>
 				<p>Select your account type:</p>
-				<input type="radio" onclick="StoreownerCheck();" id="shop" name="acctype" value="shop">
+				<input type="radio" onclick="StoreownerCheck();" id="shop" name="acctype" value="shop" required>
 				<label for="shop">Shopper</label>
 				<input type="radio" onclick="StoreownerCheck();" id="storeown" name="acctype" value="storeown">
 				<label for="storeown">Store Owner</label>
 				<div id="ifStoreown" style="display:none">
 					<label for="busname">Business Name</label>
-					<input type="text" id="busname" name="busname">
+					<input type="text" id="busname" name="busname" placeholder="Enter your business name">
 					<label for="stoname">Store Name</label>
-					<input type="text" id="stoname" name="stoname">
+					<input type="text" id="stoname" name="stoname" placeholder="Enter your store name">
 					<label for="stocategory">Store Category</label>
 					<select id="stocategory" name="stocategory">
-					<option>Select Store Category</option>
+					<option disabled selected>Select Store Category</option>
 					<option>Department Store</option>
 					<option>Grocery Store</option>
 					<option>Restaurant</option>
@@ -330,7 +332,7 @@
 					</select>
 				</div>
 				<input type="reset" value="Reset">
-				<a href="mall-thankyou-register.html">Submit</a>
+				<input type="submit" value="Submit">
 			</form>
 		</div>
 		<hr>

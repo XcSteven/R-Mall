@@ -510,7 +510,7 @@
 		padding: 12px;
 	}
 	
-	.login a, input[type=submit] {
+	.login a, input[type=submit], .form input[type=reset], input[type=submit] {
 		padding: 10px;
 		font-size: 20px;
 	}
@@ -643,7 +643,7 @@
 		padding: 10px;
 	}
 	
-	.login a, input[type=submit] {
+	.login a, input[type=submit], .form input[type=reset], input[type=submit] {
 		padding: 8px;
 		font-size: 16px;
 	}
@@ -775,7 +775,7 @@
 		padding: 8px;
 	}
 	
-	.login a, input[type=submit] {
+	.login a, input[type=submit], .form input[type=reset], input[type=submit] {
 		padding: 6px;
 		font-size: 12px;
 	}

@@ -81,9 +81,19 @@
 	float: left;
 	padding-bottom: 25px;
 	box-sizing: border-box;
-	width: 100%;
 	display: flex;
-	animation: autoscroll 7s linear infinite forwards;
+}
+
+.fixed-list {
+	float: left;
+	padding-bottom: 25px;
+	box-sizing: border-box;
+	margin: auto;
+	width: 100%;
+}
+
+.list {
+	animation: autoscroll 10s infinite linear;
 }
 
 .title {
@@ -100,6 +110,12 @@
 
 .column {
 	float: left;
+}
+
+.fixed-column {
+	float: left;
+	width: 30.9%;
+	margin: auto;
 }
 
 .list-browse {
@@ -120,7 +136,6 @@
 	text-align: center;
 	background-color: #fafafa;
 	box-sizing: border-box;
-	overflow: auto;
 }
 
 .card-box a {
@@ -279,13 +294,14 @@
 	opacity: 0.8;
 }
 
-.login a {
+.login a, input[type=submit] {
 	display: inline-block;
 	text-align: center;
 	box-sizing: border-box;
 	background-color: #a91b0d;
 	color: #ffffff;
 	text-decoration: none;
+	margin: auto;
 }
 
 .login a:hover {
@@ -467,12 +483,21 @@
 		font-size: 12px;
 	}
 	
-	.column {
+	.column, .fixed-column {
 		padding: 0 12px;
 		font-size: 14px;
+	}
+	
+	.column {
 		min-width: 25%;
 	}
 	
+	@keyframes autoscroll {
+		100% {
+			transform: translateX(-160%);
+		}
+	}
+
 	.column-browse {
 		padding: 0 20px;
 	}
@@ -481,20 +506,17 @@
 		animation-play-state: paused;
 	}
 
-	@keyframes autoscroll {
-		from {transform: translateX(0);}
-		to {transform: translateX(-66%);}
-	}
-
 	.card-box {
 		padding: 12px;
 	}
 	
-	.login a {
-		width: 32.5%;
+	.login a, input[type=submit] {
 		padding: 10px;
-		margin: 12px 0;
 		font-size: 20px;
+	}
+	
+	.login a {
+		width: 49.55%;
 	}
 	
 	.fpass a {
@@ -594,10 +616,19 @@
 		font-size: 10px;
 	}
 	
-	.column {
+	.column, .fixed-column {
 		padding: 0 8px;
 		font-size: 12px;
+	}
+	
+	.column {
 		min-width: 35%;
+	}
+	
+	@keyframes autoscroll {
+		100% {
+			transform: translateX(-220%);
+		}
 	}
 	
 	.column-browse {
@@ -608,20 +639,17 @@
 		animation-play-state: paused;
 	}
 
-	@keyframes autoscroll {
-		from {transform: translateX(0);}
-		to {transform: translateX(-125%);}
-	}
-
 	.card-box {
 		padding: 10px;
 	}
 	
-	.login a {
-		width: 32.5%;
+	.login a, input[type=submit] {
 		padding: 8px;
-		margin: 10px 0;
 		font-size: 16px;
+	}
+	
+	.login a {
+		width: 49.5%;
 	}
 	
 	.fpass a {
@@ -724,30 +752,36 @@
 		font-size: 8px;
 	}
 	
-	.column {
+	.column, .fixed-column {
 		padding: 0 4px;
 		font-size: 10px;
-		min-width: 47.75%;
+	}
+	
+	.column {
+		min-width: 33.33%;
+	}
+	
+	@keyframes autoscroll {
+		100% {
+			transform: translateX(-206%);
+		}
 	}
 	
 	.column-browse {
 		padding: 0 12px;
-	}
-	
-	@keyframes autoscroll {
-		from {transform: translateX(0);}
-		to {transform: translateX(-205%);}
 	}
 
 	.card-box {
 		padding: 8px;
 	}
 	
-	.login a {
-		width: 32%;
+	.login a, input[type=submit] {
 		padding: 6px;
-		margin: 8px 0;
 		font-size: 12px;
+	}
+	
+	.login a {
+		width: 48.75%;
 	}
 	
 	.fpass a {

@@ -27,8 +27,7 @@
         <hr>
         <div class="form">
             <h1>Contact</h1>
-            <form id="Contactform" onsubmit="return custom_valid()">
-                <p class="error" id="form_submit_result"></p>
+            <form onsubmit="return custom_valid()">
                 <label for="purpose">Contact Purpose</label>
                 <select id="purpose" name="purpose" required>
 					<option disabled selected>Select a purpose</option>
@@ -68,6 +67,7 @@
                 <label for="sat">Saturday</label>
                 <input type="checkbox" id="day7" class="day_check" value="Sunday">
                 <label for="sun">Sunday</label>
+				<br><span class="error" id="form_submit_result"></span>
                 <p>Message:</p>
                 <textarea id="mess" name="mess" rows="4" placeholder="Leave a message for us (50-500 words allowed)" required></textarea>
 				<span id="letters"></span>

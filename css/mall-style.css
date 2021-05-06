@@ -1,6 +1,28 @@
 * {
 	font-family: "Helvetica", sans-serif;
 }
+.cookie {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	border: solid;
+	border-width: thin;
+	background-color: #f2f2bf;
+	animation: fadein 1.5s;
+}
+
+.cookie button {
+	border: solid;
+	border-width: thin;
+	background-color: #710c04;
+	color: #ffffff;
+}
+
+.cookie a {
+	text-decoration: none;
+	font-weight: bold;
+}
 
 .nav-menu-bar {
 	z-index: 1;
@@ -448,6 +470,24 @@
 }
 
 @media screen and (min-width: 1024px) {
+	.cookie {
+		padding: 16px;
+		font-size: 16px;
+		width: 30%;
+	}
+	.cookie h1 {
+		font-size: 30px;
+	}
+	
+	.cookie a {
+		padding: 0 12px;
+	}
+	
+	.cookie button {
+		font-size: 20px;
+		padding: 12px;
+	}
+	
 	.header img {
 		height: 125px;
 		width: 250px;
@@ -579,6 +619,24 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+	.cookie {
+		padding: 14px;
+		font-size: 14px;
+		width: 40%;
+	}
+	.cookie h1 {
+		font-size: 26px;
+	}
+	
+	.cookie a {
+		padding: 0 10px;
+	}
+	
+	.cookie button {
+		font-size: 18px;
+		padding: 10px;
+	}
+	
 	.header img {
 		height: 100px;
 		width: 200px;
@@ -712,6 +770,24 @@
 }
 
 @media screen and (max-width: 767px) {
+	.cookie {
+		padding: 12px;
+		font-size: 12px;
+		width: 75%;
+	}
+	.cookie h1 {
+		font-size: 22px;
+	}
+	
+	.cookie a {
+		padding: 0 8px;
+	}
+	
+	.cookie button {
+		font-size: 16px;
+		padding: 8px;
+	}
+	
 	.header img {
 		height: 75px;
 		width: 150px;
@@ -763,7 +839,7 @@
 	
 	@keyframes autoscroll {
 		100% {
-			transform: translateX(-206%);
+			transform: translateX(-208%);
 		}
 	}
 	

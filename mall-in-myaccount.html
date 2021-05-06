@@ -22,6 +22,12 @@
 			</nav>
 		</header>
 		<hr>
+		<div id="cookie" class="cookie">
+			<h1 style="text-align:center">I use cookies</h1>
+			<p>My website uses cookies necessary for its basic functioning. By continuing browsing, you consent to my use of cookies and other technologies.</p>
+			<button id="cookie_accept">I understand</button>
+			<a href="https://gdpr-info.eu/">Learn more</a>
+		</div>
 		<div class="form">
 			<h1>Account</h1>
 			<p style="text-align: center; text-decoration: underline">This is a sample piece of information</p>
@@ -31,7 +37,7 @@
 			<p><b>Profile Picture:</b><br><br>
 				<img src="images/avatar.png" alt="Profile picture" style="border: solid; width:40%; margin:auto; display:block">
 			</p>
-			<a href="index.html">Sign Out</a>
+			<a href="index.html" onclick="deleteInfo()">Sign Out</a>
 		</div>
 		<hr>
 		<footer class="footer">
@@ -42,5 +48,6 @@
 			</nav>
 		</footer>
 		<script src="js/mall-account.js"></script>
+		<script src="js/cookie.js"></script>
 	</body>
 </html>

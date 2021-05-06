@@ -18,7 +18,9 @@ function GetEmail()
 	email = document.getElementById('email').value;
 	localStorage.setItem('InputValue', email);
 }
+document.addEventListener('DOMContentLoaded', function GetEmail() {
 	document.getElementById('UserEmail').innerHTML=localStorage.getItem('InputValue');
+});
 
 function is_numeric(str) {
 	return /^\d+$/.test(str);
@@ -64,4 +66,8 @@ function custom_valid() {
         return false;
     }
 	return true;
+}
+
+function deleteInfo() {
+  localStorage.clear();
 }

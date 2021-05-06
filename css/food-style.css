@@ -2,6 +2,29 @@
 	font-family: "Helvetica", sans-serif;
 }
 
+.cookie {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	border: solid;
+	border-width: thin;
+	background-color: #f2f2bf;
+	animation: fadein 1.5s;
+}
+
+.cookie button {
+	border: solid;
+	border-width: thin;
+	background-color: #710c04;
+	color: #ffffff;
+}
+
+.cookie a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
 .head {
     display: inline-block;
     background-color: #9acd32;
@@ -200,6 +223,39 @@
 	width: 100%;
 }
 
+.thanku {
+	margin: 25px auto;
+	width: 50%;
+	border-style: solid;
+	padding: 10px;
+	background-color: #fffdd0;
+}
+
+.thanku p {
+	text-align: center;
+	font-weight: bold;
+	font-style: oblique;
+	font-size: 16px;
+}
+
+.thanku a {
+	width: 100%;
+	display: block;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #a91b0d;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 8px;
+	margin: 8px 0;
+	font-size: 14px;
+}
+
+.thanku a:hover {
+	background-color: #e2252b;
+	color: #000000;
+}
+
 .pptos {
 	border-style: solid;
 	padding: 10px;
@@ -276,6 +332,26 @@
 	text-indent: 5%;
 }
 
+.mod-win {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.mod-content {
+	background-color: #f5f5dc;
+	margin: auto;
+	border-style: solid;
+	width: 80%;
+	animation: fadein 1s;
+}
+
 #detail {
 	float: left;
 	width: 33.33%;
@@ -321,18 +397,19 @@
 .cart {
 	display: inline-block;
 	text-align: center;
-	align-items: center;
-	justify-content: center;
 	font-weight: bold;
 	font-size: 30px;
 	padding: 15px 32px;
 	margin: auto;
-	text-decoration: none;
 }
 
 .cart img {
 	width: 3%;
-	height: auto
+	height: auto;;
+}
+
+.cart a {
+	text-decoration: none;
 }
 /* ----------------- CART PAGE --------------- */
 
@@ -353,8 +430,8 @@
 	justify-content: center;
 }
 
-.product-title, .price, .quantity {
-    width: 30%;
+.product-title, .price, .quantity, .cost {
+    width: 25%;
 	margin: 30px auto;
 	display: flex;
 	text-align: center;
@@ -364,12 +441,12 @@
 }
 
 .product {
-    width: 33%;
+    width: 25%;
     display: flex;
-    align-items: center;
-    padding: 10px 0;
+    text-align: center;
+	align-items: center;
+	justify-content: center;
 	font-weight: bold;
-	text-align: center;
 }
 
 .products {
@@ -388,22 +465,39 @@
 	margin: 0 5px;
 }
 
-.basketTotalContainer {
+.totalContainer {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 10px 0;
 }
 
-.basketTotalTitle {
+.totalTitle {
     width: 30%;
 }
 
-.basketTotal {
+.total {
     width: 10%;
 }
 
 @media screen and (min-width: 1024px) {
+	.cookie {
+		padding: 16px;
+		font-size: 16px;
+		width: 30%;
+	}
+	.cookie h1 {
+		font-size: 30px;
+	}
+	
+	.cookie a {
+		padding: 0 12px;
+	}
+	
+	.cookie button {
+		font-size: 20px;
+		padding: 12px;
+	}
+
 	.head img {
 		height: 125px;
 		width: 250px;
@@ -463,6 +557,16 @@
 		width: 2.65%;
 	}
 	
+	.thanku p {
+		font-size: 20px;
+	}
+	
+	.thanku a {
+		padding: 12px;
+		margin: 12px 0;
+		font-size: 18px;
+	}
+
 	.pptos {
 		margin: 25px auto;
 		width: 75%;
@@ -484,6 +588,14 @@
 		padding: 12px;
 	}
 
+	.mod-win {
+		padding-top: 10%;
+	}
+	
+	.mod-content {
+		padding: 20px;
+	}
+
 	@keyframes autoscroll {
 		100% {
 			transform: translateX(-160%);
@@ -492,6 +604,24 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+	.cookie {
+		padding: 14px;
+		font-size: 14px;
+		width: 40%;
+	}
+	.cookie h1 {
+		font-size: 26px;
+	}
+	
+	.cookie a {
+		padding: 0 10px;
+	}
+	
+	.cookie button {
+		font-size: 18px;
+		padding: 10px;
+	}
+
 	.head img {
 		height: 100px;
 		width: 200px;
@@ -568,6 +698,16 @@
 		width: 4.75%;
 	}
 	
+	.thanku p {
+		font-size: 18px;
+	}
+	
+	.thanku a {
+		padding: 10px;
+		margin: 10px 0;
+		font-size: 16px;
+	}
+
 	.pptos {
 		margin: 20px auto;
 		width: 80%;
@@ -589,6 +729,22 @@
 		padding: 12px;
 	}
 
+	.mod-win {
+		padding-top: 20%;
+	}
+	
+	.mod-content {
+		padding: 16px;
+	}
+
+	.cart img {
+		width: 5%;
+	}
+
+	.product img {
+		width: 15%;
+	}
+
 	@keyframes autoscroll {
 		100% {
 			transform: translateX(-220%);
@@ -597,6 +753,24 @@
 }
 
 @media screen and (max-width: 767px) {
+	.cookie {
+		padding: 12px;
+		font-size: 12px;
+		width: 75%;
+	}
+	.cookie h1 {
+		font-size: 22px;
+	}
+	
+	.cookie a {
+		padding: 0 8px;
+	}
+	
+	.cookie button {
+		font-size: 16px;
+		padding: 8px;
+	}
+
 	.head img {
 		height: 75px;
 		width: 150px;
@@ -678,6 +852,16 @@
 		width: 5.5%;
 	}
 
+	.thanku p {
+		font-size: 16px;
+	}
+	
+	.thanku a {
+		padding: 8px;
+		margin: 8px 0;
+		font-size: 14px;
+	}
+
 	.pptos {
 		margin: 15px auto;
 		width: 85%;
@@ -701,6 +885,30 @@
 
 	#detail {
 		padding: 12px;
+	}
+
+	.mod-win {
+		padding-top: 30%;
+	}
+	
+	.mod-content {
+		padding: 12px;
+	}
+
+	.cart img {
+		width: 10%;
+	}
+
+	.product img {
+		width: 30%;
+	}
+
+	.products img {
+		width: 20%;
+	}
+
+	.total {
+		margin: auto
 	}
 
 	@keyframes autoscroll {

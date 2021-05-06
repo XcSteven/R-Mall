@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Food Store - Contact</title>
+		<link rel="stylesheet" href="css/food-style.css">
+		<link rel="shortcut icon" href="images/favicon.ico">
+	</head>
+	<body>
+		<body style="background-color:#F5F5DC">
+		<header class="head">
+			<a href="food-in-home.html"><img src="images/logo-food.png" alt="logo-food"></a>
+			<nav class="head-navbar">
+				<a href="index.html">R-Mall</a>
+				<a href="food-in-home.html">Home</a>
+                <a href="food-in-aboutus.html">About Us</a>
+				<div class="dropdown">
+					<div class="dropbtn">Products</div>
+					<div class="dropdown-content">
+						<a href="food-in-category.html">Browse Products by Categories</a>
+						<a href="food-in-createdtime.html">Browse Products by Created Time</a>
+					</div>	
+				</div>
+				<a href="food-in-contact.html">Contact</a>				
+			</nav>						
+		</header>
+		<hr>
+        <div class="form">
+            <h1>Contact</h1>
+            <form>
+                <label for="purpose">Contact Purpose</label>
+                <select id="purpose" name="purpose">
+                    <option>Select a purpose</option>
+                    <option>Report a problem / Give feedback</option>
+                    <option>Apply for employment</option>
+                    <option>Ask for promotion</option>
+                    <option>Ask for advertisements</option>
+                    <option>Request a refund</option>
+                    <option>Other</option>
+                </select>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <p>Preferred contact method:</p>
+                <input type="radio" id="mail" name="method" value="Email">
+                <label for="mail">Email</label>
+                <input type="radio" id="phonenum" name="method" value="Phone">
+                <label for="phonenum">Phone</label>
+                <p>Contact days:</p>
+                <input type="checkbox" id="day1" name="mon" value="Monday">
+                <label for="mon">Monday</label>
+                <input type="checkbox" id="day2" name="tue" value="Tuesday">
+                <label for="tue">Tuesday</label>
+                <input type="checkbox" id="day3" name="wed" value="Wednesday">
+                <label for="wed">Wednesday</label>
+                <input type="checkbox" id="day4" name="thu" value="Thursday">
+                <label for="thu">Thursday</label>
+                <input type="checkbox" id="day5" name="fri" value="Friday">
+                <label for="fri">Friday</label>
+                <input type="checkbox" id="day6" name="sat" value="Saturday">
+                <label for="sat">Saturday</label>
+                <input type="checkbox" id="day7" name="sun" value="Sunday">
+                <label for="sun">Sunday</label>
+                <p>Message</p>
+                <textarea id="mess" name="mess" rows="4" placeholder="Please write here..."></textarea>
+                <br>
+                <div class="container">
+                    <button type="reset" class="button"><b>Clear</b></button>
+                    <button type="submit" class="button"><b>Send</b></button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <footer class="foot">
+			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/food-in-home.html - All Rights Reserved.</p>
+			<nav class="foot-navbar">
+				<a href="food-in-tos.html">Term of Service</a>
+				<a href="food-in-pprivacy.html">Privacy Policy</a>	
+			</nav>
+        </footer>
+	</body>
+</html>

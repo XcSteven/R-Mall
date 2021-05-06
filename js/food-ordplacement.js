@@ -6,13 +6,20 @@ let add = document.querySelectorAll('.add-cart');
 let buy = document.querySelectorAll('.buy-now');
 
 var products = [
-    {
-        name: 'Pepsi',
-        tag: 'pepsi',
-        id: '2', 
-        price: 0.40,
-        inCart: 0
-    }
+  {
+    name: 'Cherry',
+    tag: 'cherry',
+    id: '1',
+    price: 20,
+    inCart: 0
+  },
+  {
+    name: 'Pepsi',
+    tag: 'pepsi',
+    id: '2', 
+    price: 0.40,
+    inCart: 0
+  }
 ];
 
 for(let i=0; i< add.length; i++) {
@@ -81,6 +88,23 @@ function setItems(product) {
 }
 
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+}
+
+function coupon() {
+    var code = document.getElementById('coupon').value;
+    
+    if(code == 'COSC2430-HD') {
+        text = "Coupon accepted";
+        discount = 0.8*totalAmount.parseInt;
+    } else if(code == 'COSC2430-DI') {
+        text = "Coupon accepted";
+        discount = 0.9*totalAmount.parseInt;
+    } else {
+        text = "Wrong code. Please enter again";
+        discount = totalAmount.parseInt
+    }
+    document.getElementById('message').innerHTML = text;
+    document.getElementById('discount').innerHTML = discount
 }
 
 function totalAmount( product, action ) {

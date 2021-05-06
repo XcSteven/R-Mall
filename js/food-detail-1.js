@@ -57,8 +57,8 @@ function cartNumbers(product, action) {
 }
 
 function setItems(product) {
-    // let productNumbers = localStorage.getItem('cartNumbers');
-    // productNumbers = parseInt(productNumbers);
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
 

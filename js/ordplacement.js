@@ -240,7 +240,7 @@ function coupon() {
         discount = cartCost
     }
     document.getElementById('message').innerHTML = text;
-    document.getElementById('discount').innerHTML = discount.toFixed(2)
+    document.getElementById('discount').innerHTML = Number(discount).toFixed(2)
     document.getElementById('totalContainer').style.textDecoration = "line-through"
 }
 

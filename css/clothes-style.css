@@ -348,6 +348,58 @@
 	color: #a45ee5;
 }
 
+.container {
+	display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add-cart {
+	background-color: #b31616;
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    margin: auto;
+    border-style: solid;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	cursor: pointer;
+}
+
+.buy-now {
+	background-color: #b31616;
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    margin: auto;
+    border-style: solid;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	cursor: pointer;
+}
+
+.cart {
+	display: inline-block;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 30px;
+	padding: 15px 32px;
+	margin: auto;
+	text-decoration: none;
+}
+
+.cart img {
+	width: 3%;
+	height: auto
+}
+
+
 @media screen and (min-width: 1024px) {
 	.header img {
 		height: 125px;

@@ -24,7 +24,7 @@ var products = [
     name: 'Sneakers',
     tag: 'sneakers',
     id: '3',
-    price: 199,
+    price: 119,
     inCart: 0
     }
 ];

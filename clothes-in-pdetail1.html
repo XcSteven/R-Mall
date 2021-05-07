@@ -3,83 +3,84 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Clothes Store - Product Detail</title>
-		<link rel="stylesheet" href="css/clothes-style.css">
+		<title>Food Store - Product Detail</title>
 		<link rel="stylesheet" href="css/mall-style.css">
+		<link rel="stylesheet" href="css/food-style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
 	</head>
 	<body>
-		<body style="background-color:#F5F5DC">
-			<header class="header">
-				<a href="mall-in-home.html"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
-				<nav class="nav-menu-bar">
-					<a href="mall-in-home.html">Home</a>
-					<a href="mall-in-aboutus.html">About Us</a>
-					<a href="mall-in-fees.html">Fees</a>
-					<a href="mall-in-myaccount.html">Account</a>
-					<a href="mall-in-browse.html">Browse</a>
-					<a href="mall-in-faqs.html">FAQs</a>
-					<a href="mall-in-contact.html">Contact</a>
-				</nav>
-			</header>	
+		<body style="background-color:#f5f5dc">
+		<header class="header">
+			<a href="mall-in-home.html"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
+			<nav class="nav-menu-bar">
+				<a href="mall-in-home.html">Home</a>
+				<a href="mall-in-aboutus.html">About Us</a>
+				<a href="mall-in-fees.html">Fees</a>
+				<a href="mall-in-myaccount.html">Account</a>
+				<a href="mall-in-browse.html">Browse</a>
+				<a href="mall-in-faqs.html">FAQs</a>
+				<a href="mall-in-contact.html">Contact</a>
+			</nav>
+		</header>
 		<hr>
-		<div class="main">
+		<div id="cookie" class="cookie">
+			<h1 style="text-align:center">I use cookies</h1>
+			<p>My website uses cookies necessary for its basic functioning. By continuing browsing, you consent to my use of cookies and other technologies.</p>
+			<button id="cookie_accept">I understand</button>
+			<a href="https://gdpr-info.eu/">Learn more</a>
+		</div>
+        <div class="main">
 			<div class="cart">
 				<a href="store-ordplacement.html"><img src="images/cart.png" alt="cart"> Cart <span>0</span></a>
 			</div>
-            <div class="pdetail">
-				<img src="images/new3.jpg" alt="Sneakers" style="max-width:100%; height: auto"></a>
-				<p><b style="text-decoration:underline">Nikes</b><b> Waffle 2 lace-up sneakers</b></p></a>
-				<p>Still wondering whether to add this Nike pair to your collection or not? Well, when it comes to these orange low-top sneakers, we believe there's only one answer: just do it.</p>
-				<p>Price: $119</p>
+            <div class="title">
+				<h1>Fruit</h1>
 			</div>
+            <div class="list">
+                <img id="detail" src="images/cherry1.jpg" alt="cherry1">
+                <img id="detail" src="images/cherry2.jpg" alt="cherry2">
+                <img id="detail" src="images/cherry3.jpg" alt="cherry3">
+            </div>
+            <div class="box" >
+                <h1><b>Cherry</b></h1>
+                <p>$20/kg</p>
+                <p>Amazing fruit with sour flavor, a symbol of love</p>
+                <p>Date: 31/03/2021</p>
+            </div>
             <br>
 			<div class="container">
-				<a href="store-ordplacement.html"><button class="buy-now 3" onclick="popUp()">Buy now</button></a>
-				<button class="add-cart 3" onclick="popUp()">Add</button>
+				<a href="store-ordplacement.html"><button class="buy-now 1" onclick="popUp()">Buy now</button></a>
+				<button class="add-cart 1" onclick="popUp()">Add</button>
 			</div>
         </div>
-        <div class="products">
-			<h2><u>Recommended Products</u></h2>
+		<hr>
+		<div class="title">
+			<h1>Recommended Products</h1>
 		</div>
-		<div class="plist">
-			<div class="pcolumn">
-				<div class="pcard-box">
-					<a href="clothes-in-pdetail2.html"><img src="images/new2.jpg" alt="Polo shirt" style="max-width:100%; height: auto"></a>
-					<a href="clothes-in-pdetail2.html"><p><b style="text-decoration:underline">Palm Angels</b><b> Logo-print shirt</b></p></a>
-					<p>$411</p>
+		<div class="list">
+			<div class="column">
+				<div class="box">
+					<a href="food-in-detail-2.html"><img src="images/kiwi.jpg" alt="kiwi" style="max-width:75%; height: auto"></a>
+					<a href="food-in-detail-2.html"><p><b>Kiwi</b></p></a>
+					<p>$8.50/kg</p>
 				</div>
 			</div>
-			<div class="pcolumn">
-				<div class="pcard-box">
-					<a href="clothes-in-pdetail2.html"><img src="images/f2.jpg" alt="Jordan" style="max-width:100%; height: auto"></a>
-					<a href="clothes-in-pdetail2.html"><p><b style="text-decoration:underline">Jordan</b><b> Air Jordan 1 Retro High sneakers</b></p></a>
-					<p>$405</p>
+			<div class="column">
+				<div class="box">
+					<a href="food-in-detail-2.html"><img src="images/envy-apple.jpg" alt="envy-apple" style="max-width:75%; height: auto"></a>
+					<a href="food-in-detail-2.html"><p><b>Envy Apple</b></p></a>
+					<p>$8.50/kg</p>
 				</div>
 			</div>
-			<div class="pcolumn">
-				<div class="pcard-box">
-					<a href="clothes-in-pdetail2.html"><img src="images/f3.jpg" alt="Oversized shirt" style="max-width:100%; height: auto"></a>
-					<a href="clothes-in-pdetail2.html"><p><b style="text-decoration:underline">Burberry</b><b> Oversized check shirt</b></p></a>
-					<p>$407</p>
-				</div>
-			</div>
-			<div class="pcolumn">
-				<div class="pcard-box">
-					<a href="clothes-in-pdetail2.html"><img src="images/new5.jpg" alt="Sneakers" style="max-width:100%; height: auto"></a>
-					<a href="clothes-in-pdetail2.html"><p><b style="text-decoration:underline">Nikes</b><b> Air Force 1 Crater sneakers</b></p></a>
-					<p>$135</p>
-				</div>
-			</div>
-			<div class="pcolumn">
-				<div class="pcard-box">
-					<a href="clothes-in-pdetail2.html"><img src="images/new1.jpg" alt="Patterned leggings" style="max-width:100%; height: auto"></a>
-					<a href="clothes-in-pdetail2.html"><p><b style="text-decoration:underline">Adidas</b><b> Three-striped leggings</b></p></a>
-					<p>$42</p>
+			<div class="column">
+				<div class="box">
+					<a href="food-in-detail-2.html"><img src="images/french-strawberry.jpg" alt="french-strawberry" style="max-width:75%; height: auto"></a>
+					<a href="food-in-detail-2.html"><p><b>French Strawberry</b></p></a>
+					<p>$8.50/kg</p>
 				</div>
 			</div>
 		</div>
-		<hr style="visibility:hidden">
+        <hr style="visibility:hidden">
 		<hr>
 		<footer class="footer">
 			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
@@ -89,5 +90,6 @@
 			</nav>
 		</footer>
 		<script src="js/clothes-pdetail1.js"></script>
+		<script src="js/cookie.js"></script>
 	</body>
 </html>

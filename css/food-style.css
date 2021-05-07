@@ -326,6 +326,10 @@
 	margin: auto;
 }
 
+.prof-card img:hover {
+	opacity: 0.85;
+}
+
 .abtus-content {
 	width: 95%;
 	margin: auto;
@@ -423,6 +427,12 @@
 .cart a {
 	text-decoration: none;
 }
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
 /* ----------------- CART PAGE --------------- */
 
 .container-products {
@@ -739,6 +749,10 @@
 		width: 33.33%;
 	}
 	
+	.prof-card img:hover {
+		opacity: 0.85;
+	}
+
 	.abtus-content h2 {
 		font-size: 20px;
 	}

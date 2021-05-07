@@ -10,6 +10,10 @@
 	border: solid;
 }
 
+.header-navbar {
+	z-index: 1;
+}
+
 .header-navbar a {
 	text-decoration: none;
 	border-style: solid;
@@ -60,6 +64,10 @@
   
 .selectlist:hover .selectlist-content {
     display: contents;
+}
+
+.footer-navbar {
+	z-index: 1;
 }
 
 .footer-navbar {

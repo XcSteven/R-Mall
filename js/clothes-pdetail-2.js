@@ -7,8 +7,8 @@ let buy = document.querySelectorAll('.buy-now');
 
 var products = [
     {
-        name: 'Basket bag',
-        tag: 'basket bag',
+        name: 'Basket Bag',
+        tag: 'basketbag',
         id: '4',
         price: 562,
         inCart: 0

@@ -41,6 +41,7 @@
 	top: 0;
 	position: fixed;
 	width: auto;
+	z-index: 1;
 }
 
 .head-navbar a {
@@ -93,12 +94,13 @@
 	animation: autoscroll 10s infinite linear;
 }
 
-.fixed-list {
+.grid {
 	float: left;
-	padding-bottom: 25px;
-	box-sizing: border-box;
-	margin: auto;
-	width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    gap: 15px;
 }
 
 .title {
@@ -221,6 +223,16 @@
 .form textarea {
 	resize: none;
 	width: 100%;
+}
+
+.error {
+    color: #ff0000;
+}
+
+.error-border {
+    opacity: 0.5;
+	background-color: #ff0000;
+	color: #ffffff;
 }
 
 .thanku {

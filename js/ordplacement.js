@@ -19,14 +19,7 @@ var products = [
     id: '2', 
     price: 1,
     inCart: 0
-  },
-  {
-    name: 'Sneakers',
-    tag: 'sneakers',
-    id: '3',
-    price: 119,
-    inCart: 0
-    }
+  }
 ];
 
 for(let i=0; i< add.length; i++) {
@@ -139,7 +132,7 @@ function displayCart() {
 
         productContainer.innerHTML += `
             <div class="totalContainer">
-                <h4 class="totalTitle">Total Cost</h4>
+                <h4 class="totalTitle">Total Cost:</h4>
                 <h4 class="total">$${cart}</h4>
             </div>`
 

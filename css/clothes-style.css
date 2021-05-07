@@ -97,6 +97,11 @@
 	color: #7e1616;
     text-align: center;
 }
+.recommend_title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #7e1616;
+    text-align: center;
+}
 .products a{
 	color: #000000;
 	text-decoration: none;

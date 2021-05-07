@@ -19,6 +19,20 @@ var products = [
     id: '2', 
     price: 1,
     inCart: 0
+  },
+  {
+    name: 'Sneakers',
+    tag: 'sneakers',
+    id: '3',
+    price: 119,
+    inCart: 0
+  },
+  {
+    name: 'Basket bag',
+    tag: 'basket bag',
+    id: '4',
+    price: 562,
+    inCart: 0
   }
 ];
 

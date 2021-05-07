@@ -130,8 +130,8 @@ function displayCart() {
             <div class="cost">$${item.inCart * item.price}</div>`
         });
 
-        productContainer.innerHTML += `
-            <div class="totalContainer">
+            productContainer.innerHTML += `
+            <div class="totalContainer" id="totalContainer">
                 <h4 class="totalTitle">Total Cost:</h4>
                 <h4 class="total">$${cart}</h4>
             </div>`
@@ -223,6 +223,8 @@ function coupon() {
     }
     document.getElementById('message').innerHTML = text;
     document.getElementById('discount').innerHTML = discount
+    document.getElementById('totalContainer').style.textDecoration = "line-through"
+
 }
 
 onLoadCartNumbers();

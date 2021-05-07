@@ -284,7 +284,7 @@
     border: none;
     color: #000000;
     padding: 15px 32px;
-    margin: auto;
+    margin: 10px auto;
     border-style: solid;
     text-align: center;
     text-decoration: none;
@@ -297,6 +297,13 @@
 	display: block;
     margin: 0 auto;
     text-align: center;
+}
+
+.containerButton {
+	display: block;
+    margin: 0 auto;
+    text-align: center;
+	padding: 10px auto;
 }
 
 .profile {

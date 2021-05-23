@@ -1,3 +1,44 @@
+<?php
+  if(file_exists(__DIR__.'/install.php')){
+      die('You must delete install.php before using this site');
+  }
+          function read_csv($file){
+                  $temp = array();
+                  $file = fopen($file,"r");
+                  
+                  $key =  fgetcsv($file);
+                  while(!feof($file)) {
+
+                    $csv = fgetcsv($file);
+
+                    if($csv & $csv[1] != "" & gettype($csv) == "array"){
+                      foreach($csv as $pkey => $data){
+                        
+                        $temp[$csv[0]][$key[$pkey]] = $data;
+                      }
+                      if(array_key_exists('created_time', $temp[$csv[0]])){
+                        $temp[$csv[0]]['created_time'] = strtotime($temp[$csv[0]]['created_time']);
+                      }
+                    }
+
+                  }
+                  return $temp;
+          }
+          function sort_list($array){
+
+                  $date = array_column($array, 'created_time');
+
+                  array_multisort($date, SORT_DESC, $array);
+                  return $array;
+          }
+  $store_dir = __DIR__.'/csv/stores.csv';
+  $product_dir = __DIR__.'/csv/products.csv';
+  $categories_dir = __DIR__.'/csv/categories.csv';
+  $store = sort_list(read_csv($store_dir));
+  $product = sort_list(read_csv($product_dir));
+  $categories = read_csv($categories_dir);
+?>
+
 <!doctype html>
 <html>
 	<head>
@@ -33,151 +74,43 @@
 				<h1>New Stores</h1>
 			</div>
 			<div class="list">
+        <?php 
+        $i = 0;
+        foreach($store as $mkey => $value){
+            if($i > 10) break;
+          ?>
 				<div class="column">
 					<div class="card-box">
-						<a href="clothes-notin-home.html"><img src="images/logo-clothes.png" alt="R-Clothes" title="R-Clothes" style="max-width:100%; height: auto"></a>
-						<h2>R-Clothes</h2>
+						<a href="clothes-notin-home.html?id=<? echo $value['id']; ?>"><img src="images/logo-clothes.png" alt="<? echo $value['name']; ?>" title="<? echo $value['name']; ?>" style="max-width:100%; height: auto"></a>
+						<h2><? echo $value['name']; ?></h2>
 					</div>
 				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-home.html"><img src="images/logo-food.png" alt="R-Food" title="R-Food" style="max-width:100%; height: auto"></a>
-						<h2>R-Food</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-home.html"><img src="images/logo-tech.png" alt="R-Tech" title="R-Tech" style="max-width:100%; height: auto"></a>
-						<h2>R-Tech</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-home.html"><img src="images/logo-book.png" alt="R-Book" title="R-Book" style="max-width:100%; height: auto"></a>
-						<h2>R-Book</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-home.html"><img src="images/logo-pet.png" alt="R-Pet" title="R-Pet" style="max-width:100%; height: auto"></a>
-						<h2>R-Pet</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-home.html"><img src="images/logo-sport.png" alt="R-Sport" title="R-Sport" style="max-width:100%; height: auto"></a>
-						<h2>R-Sport</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-home.html"><img src="images/logo-clothes.png" alt="R-Clothes" title="R-Clothes" style="max-width:100%; height: auto"></a>
-						<h2>R-Clothes</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-home.html"><img src="images/logo-food.png" alt="R-Food" title="R-Food" style="max-width:100%; height: auto"></a>
-						<h2>R-Food</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-home.html"><img src="images/logo-tech.png" alt="R-Tech" title="R-Tech" style="max-width:100%; height: auto"></a>
-						<h2>R-Tech</h2>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-home.html"><img src="images/logo-book.png" alt="R-Book" title="R-Book" style="max-width:100%; height: auto"></a>
-						<h2>R-Book</h2>
-					</div>
-				</div>
+        
+        <?php
+        $i++;
+        } ?>
 			</div>
 			<div class="title">
 				<h1>New Products</h1>
 			</div>
 			<div class="list">
+        <?php
+        $i = 0;
+        foreach($product as $mkey => $value){
+            if($i > 10) break;
+          ?>
 				<div class="column">
 					<div class="card-box">
 						<a href="clothes-notin-pdetail-1.html"><img src="images/new1.jpg" alt="Patterned leggings" style="max-width:100%; height: auto"></a>
-						<p><a href="clothes-notin-pdetail-1.html"><b style="text-decoration:underline">Adidas</b><b> Three-striped leggings</b></a></p>
-						<a href="clothes-notin-home.html">R-Clothes</a>
-						<p>$42</p>
+						<p><a href="clothes-notin-pdetail-1.html"><b style="text-decoration:underline"></b><b><? echo $value['name'] ?></b></a></p>
+						<a href="clothes-notin-home.html"><? echo $store[$value['store_id']]['name']; ?></a>
+						<p>$<? echo $value['price'];?></p>
 					</div>
 				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-detail-1.html"><img src="images/sweet-potato.jpg" alt="Sweet potato" style="max-width:100%; height: auto"></a>
-						<p><a href="food-notin-detail-1.html"><b>Sweet potato</b></a></p>
-						<a href="food-notin-home.html">R-Food</a>
-						<p>$1.50/kg</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-pdetail-2.html"><img src="images/new2.jpg" alt="Polo shirt" style="max-width:100%; height: auto"></a>
-						<p><a href="clothes-notin-pdetail-2.html"><b style="text-decoration:underline">Palm Angels</b><b> Logo-print shirt</b></a></p>
-						<a href="clothes-notin-home.html">R-Clothes</a>
-						<p>$411</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-detail-2.html"><img src="images/2-slices-pork.jpg" alt="Sliced pork" style="max-width:100%; height: auto"></a>
-						<p><a href="food-notin-detail-2.html"><b>Sliced pork</b></a></p>
-						<a href="food-notin-home.html">R-Food</a>
-						<p>$1.00</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-pdetail-1.html"><img src="images/new3.jpg" alt="Nike shoes" style="max-width:100%; height: auto"></a>
-						<p><a href="clothes-notin-pdetail-1.html"><b style="text-decoration:underline">Nike</b><b> Waffle 2 lace-up sneakers</b></a></p>
-						<a href="clothes-notin-home.html">R-Clothes</a>
-						<p>$119</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-detail-1.html"><img src="images/french-strawberry.jpg" alt="French strawberry" style="max-width:100%; height: auto"></a>
-						<p><a href="food-notin-detail-1.html"><b>French strawberry</b></a></p>
-						<a href="food-notin-home.html">R-Food</a>
-						<p>$8.50/kg</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-pdetail-1.html"><img src="images/new1.jpg" alt="Patterned leggings" style="max-width:100%; height: auto"></a>
-						<p><a href="clothes-notin-pdetail-1.html"><b style="text-decoration:underline">Adidas</b><b> Three-striped leggings</b></a></p>
-						<a href="clothes-notin-home.html">R-Clothes</a>
-						<p>$42</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-detail-1.html"><img src="images/sweet-potato.jpg" alt="Sweet potato" style="max-width:100%; height: auto"></a>
-						<p><a href="food-notin-detail-1.html"><b>Sweet potato</b></a></p>
-						<a href="food-notin-home.html">R-Food</a>
-						<p>$1.50/kg</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-notin-pdetail-2.html"><img src="images/new2.jpg" alt="Polo shirt" style="max-width:100%; height: auto"></a>
-						<p><a href="clothes-notin-pdetail-2.html"><b style="text-decoration:underline">Palm Angels</b><b> Logo-print shirt</b></a></p>
-						<a href="clothes-notin-home.html">R-Clothes</a>
-						<p>$411</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="card-box">
-						<a href="food-notin-detail-2.html"><img src="images/2-slices-pork.jpg" alt="Sliced pork" style="max-width:100%; height: auto"></a>
-						<p><a href="food-notin-detail-2.html"><b>Sliced pork</b></a></p>
-						<a href="food-notin-home.html">R-Food</a>
-						<p>$1.00</p>
-					</div>
-				</div>
+        
+        <?php
+        $i++;
+        } ?>
 			</div>
 			<div class="title">
 				<h1>Featured Stores</h1>
@@ -224,7 +157,7 @@
 				</div>
 				<div class="fixed-column">
 					<div class="card-box">
-						<a href="food-notin-detail-1.html"><img src="images/cherry1.jpg" alt="Cherry" style="max-width:100%; height: auto"></a>
+						<a href="food-notin-detail-1.html"><img src="images/cherry.jpg" alt="Cherry" style="max-width:100%; height: auto"></a>
 						<p><a href="food-notin-detail-1.html"><b>Cherry</b></a></p>
 						<a href="food-notin-home.html">R-Food</a>
 						<p>$20/kg</p>

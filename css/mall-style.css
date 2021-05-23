@@ -104,18 +104,7 @@
 	padding-bottom: 25px;
 	box-sizing: border-box;
 	display: flex;
-}
-
-.fixed-list {
-	float: left;
-	padding-bottom: 25px;
-	box-sizing: border-box;
-	margin: auto;
-	width: 100%;
-}
-
-.list {
-	animation: autoscroll 10s infinite linear;
+	overflow: auto;
 }
 
 .title {
@@ -542,10 +531,6 @@
 		padding: 0 20px;
 	}
 
-	.list:hover {
-		animation-play-state: paused;
-	}
-
 	.card-box {
 		padding: 12px;
 	}
@@ -691,10 +676,6 @@
 	
 	.column-browse {
 		padding: 0 16px;
-	}
-
-	.list:hover {
-		animation-play-state: paused;
 	}
 
 	.card-box {

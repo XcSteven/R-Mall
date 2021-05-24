@@ -1,6 +1,6 @@
 # Group introduction:
-Github URL of the group's repo: https://github.com/XcSteven/WPasm1/ </br>
-Group's website: https://xcsteven.github.io/WPasm1/ </br>
+Github URL of the group's repo: https://github.com/XcSteven/R-Mall/ </br>
+Group's website: https://xcsteven.github.io/R-Mall/ </br>
 Our team has 3 members:
 - Bui Nguyen Ngoc Tuan: Leader of the group (double-check everything committed by the members), in charge of the Mall pages.
 - Vo Tran Khanh Linh: in charge of the Clothes Store pages.

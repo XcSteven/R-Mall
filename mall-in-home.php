@@ -1,4 +1,7 @@
 <?php
+	if(file_exists(__DIR__.'/install.php')){
+		die('You must delete install.php before using this site');
+	}
 	function read_csv($file){
 		$temp = array();
 		$file = fopen($file,"r");

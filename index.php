@@ -43,15 +43,15 @@
 	<body>
 		<body style="background-color:#f5f5dc">
 		<header class="header">
-		<a href="index.php"><img src="images/logo.png" alt="R-Mall logo" title="notin-home"></a>
+		<a href="index.php"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
 			<nav class="nav-menu-bar">
 				<a class="active" href="index.php">Home</a>
-				<a href="mall-notin-aboutus.html">About Us</a>
-				<a href="mall-notin-fees.html">Fees</a>
-				<a href="mall-notin-myaccount.html">Account</a>
-				<a href="mall-notin-browse.html">Browse</a>
-				<a href="mall-notin-faqs.html">FAQs</a>
-				<a href="mall-notin-contact.html">Contact</a>
+				<a href="mall-aboutus.html">About Us</a>
+				<a href="mall-fees.html">Fees</a>
+				<a href="mall-myaccount.html">Account</a>
+				<a href="mall-browse.html">Browse</a>
+				<a href="mall-faqs.html">FAQs</a>
+				<a href="mall-contact.html">Contact</a>
 			</nav>
 		</header>
 		<hr>
@@ -150,8 +150,8 @@
 		<footer class="footer">
 			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
 			<nav class="bottom-nav-bar">
-				<a href="mall-notin-tos.html">Terms of Service</a>
-				<a href="mall-notin-ppolicy.html">Privacy Policy</a>
+				<a href="mall-tos.html">Terms of Service</a>
+				<a href="mall-ppolicy.html">Privacy Policy</a>
 			</nav>
 		</footer>
 		<script src="js/cookie.js"></script>

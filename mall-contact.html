@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/mall-style.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <body style="background-color:#f5f5dc">
+        <header class="header">
+            <a href="index.php"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
+            <nav class="nav-menu-bar">
+                <a href="index.php">Home</a>
+                <a href="mall-aboutus.html">About Us</a>
+                <a href="mall-fees.html">Fees</a>
+                <a href="mall-myaccount.html">Account</a>
+                <a href="mall-browse.html">Browse</a>
+                <a href="mall-faqs.html">FAQs</a>
+                <a class="active" href="mall-contact.html">Contact</a>
+            </nav>
+        </header>
+        <hr>
+		<div id="cookie" class="cookie">
+			<h1 style="text-align:center">I use cookies</h1>
+			<p>My website uses cookies necessary for its basic functioning. By continuing browsing, you consent to my use of cookies and other technologies.</p>
+			<button id="cookie_accept">I understand</button>
+			<a href="https://gdpr-info.eu/">Learn more</a>
+		</div>
+        <div class="form">
+            <h1>Contact</h1>
+            <form action="mall-thankyou-contact.html" onsubmit="return custom_valid()">
+                <label for="purpose">Contact Purpose</label>
+                <select id="purpose" name="purpose" required>
+					<option disabled selected>Select a purpose</option>
+					<option>Add a new store</option>
+					<option>Report a problem / Give feedback</option>
+					<option>Apply for employment</option>
+					<option>Remove / Change store type</option>
+					<option>Host an event</option>
+					<option>Ask for promotion</option>
+					<option>Ask to run advertisements</option>
+					<option>Request a refund</option>
+					<option>Other</option>
+				</select>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" pattern=".{3,}" placeholder="Enter your name (At least 3 letters)" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" pattern="^[^(\.)][a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}" placeholder="Enter your email address" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (9-11 digits)" required>
+                <p>Preferred contact method:</p>
+                <input type="radio" id="mail" name="method" value="Email" required>
+                <label for="mail">Email</label>
+                <input type="radio" id="phonenum" name="method" value="Phone">
+                <label for="phonenum">Phone</label>
+                <p>Contact days:</p>
+                <input type="checkbox" id="day1" class="day_check" value="Monday">
+                <label for="mon">Monday</label>
+                <input type="checkbox" id="day2" class="day_check" value="Tuesday">
+                <label for="tue">Tuesday</label>
+                <input type="checkbox" id="day3" class="day_check" value="Wednesday">
+                <label for="wed">Wednesday</label>
+                <input type="checkbox" id="day4" class="day_check" value="Thursday">
+                <label for="thu">Thursday</label>
+                <input type="checkbox" id="day5" class="day_check" value="Friday">
+                <label for="fri">Friday</label>
+                <input type="checkbox" id="day6" class="day_check" value="Saturday">
+                <label for="sat">Saturday</label>
+                <input type="checkbox" id="day7" class="day_check" value="Sunday">
+                <label for="sun">Sunday</label>
+				<br><span class="error" id="form_submit_result"></span>
+                <p>Message:</p>
+                <textarea id="mess" name="mess" rows="4" placeholder="Leave a message for us (50-500 words allowed)" required></textarea>
+				<span id="letters"></span>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <hr>
+        <footer class="footer">
+            <p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
+            <nav class="bottom-nav-bar">
+                <a href="mall-tos.html">Terms of Service</a>
+                <a href="mall-ppolicy.html">Privacy Policy</a>
+            </nav>
+        </footer>
+		<script src="js/mall-contact.js"></script>
+		<script src="js/cookie.js"></script>
+    </body>
+
+</html>

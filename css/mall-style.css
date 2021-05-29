@@ -434,7 +434,7 @@
 	margin: auto;
 }
 
-.prof-column {
+.prof-column, .dash-column {
 	float: left;
 	margin: auto;
 }
@@ -445,7 +445,7 @@
 	border-color: #d63c2d;
 	background-color: #ffa5a5;
 	width: 96.5%;
-	margin: auto;
+	margin: 10px auto;
 	text-align: center;
 }
 
@@ -647,6 +647,10 @@
 		width: 33.33%;
 	}
 	
+	.dash-column {
+		width: 50%;
+	}
+	
 	.abtus-content h2 {
 		font-size: 24px;
 	}
@@ -800,6 +804,10 @@
 	
 	.prof-column {
 		width: 33.33%;
+	}
+	
+	.dash-column {
+		width: 50%;
 	}
 	
 	.abtus-content h2 {
@@ -957,7 +965,7 @@
 		font-size: 14px;
 	}
 	
-	.prof-column {
+	.prof-column, .dash-column {
 		width: 100%;
 	}
 	

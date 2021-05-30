@@ -1,3 +1,40 @@
+<?php
+	if(file_exists(__DIR__.'/install.php')){
+		die('You must delete install.php before using this site');
+	}
+	function read_csv($file){
+		$temp = array();
+		$file = fopen($file,"r");
+		$key =  fgetcsv($file);
+		while(!feof($file)) {
+			$csv = fgetcsv($file);    
+			if($csv & $csv[1] != "" & gettype($csv) == "array"){
+				foreach($csv as $pkey => $data){ 
+					$temp[$csv[0]][$key[$pkey]] = $data;
+				}
+				if(array_key_exists('created_time', $temp[$csv[0]])){
+					$temp[$csv[0]]['created_time'] = strtotime($temp[$csv[0]]['created_time']);
+				}
+			}
+		}
+		return $temp;
+	}
+	function sort_list($array){
+		$date = array_column($array, 'name');
+		array_multisort($date, SORT_ASC, $array);
+		return $array;
+	}
+	$store_dir = __DIR__.'/csv/stores.csv';
+	$store = sort_list(read_csv($store_dir));
+	$cdir = __DIR__.'/csv/categories.csv';
+	$clist = read_csv($cdir);
+	if(!isset($_GET['id'])){
+		$_GET['id'] = -1;
+		$ala = true;
+	} else {
+		$ala = false;
+	}
+?>
 <!doctype html>
 <html>
 	<head>
@@ -29,58 +66,35 @@
 			<a href="https://gdpr-info.eu/">Learn more</a>
 		</div>
 		<div class="main">
-			<button class="browse">By Name</button>
+			<button class="browse" onclick="window.location='mall-browse.php'">By Name</button>
 			<div class="dropdown">
 				<button class="browse-dropdown">By Category</button>
 				<div class="dropdown-content">
-					<a id="1">Department Store</a>
+					<?php foreach($clist as $key => $value){
+					?>
+					<a href="?id=<?php echo $value['id'];?>"><?php echo $value['name'];?></a>
+					<?php }?>
 				</div>
 			</div>
 			<div class="list-browse">
+				<?php foreach($store as $key => $value){
+					if($value['category_id'] == $_GET['id'] | $ala){
+				?>
 				<div class="column-browse" style="text-align: center">
 					<div class="card-box-border">
-						<h2>R-Clothes</h2>
-						<a href="clothes-notin-home.html"><img src="images/logo-clothes.png" alt="R-Clothes" style="max-width:100%; height: auto" title="R-Clothes"></a>
+						<h2><?php echo $value['name'];?></h2>
+						<a href="clothes-home.html"><img src="images/logo-clothes.png" alt="R-Clothes" style="max-width:100%; height: auto" title="R-Clothes"></a>
 						<hr style="visibility:hidden"><hr style="visibility:hidden">
 					</div>
 					<hr style="visibility:hidden">
-					<div class="card-box-border">
-						<h2>R-Tech</h2>
-						<a href="clothes-notin-home.html"><img src="images/logo-tech.png" alt="R-Tech" style="max-width:100%; height: auto" title="R-Tech"></a>
-						<hr style="visibility:hidden"><hr style="visibility:hidden">
-					</div>
-					<hr style="visibility:hidden">
-					<div class="card-box-border">
-						<h2>R-Pet</h2>
-						<a href="clothes-notin-home.html"><img src="images/logo-pet.png" alt="R-Pet" style="max-width:100%; height: auto" title="R-Pet"></a>
-						<hr style="visibility:hidden"><hr style="visibility:hidden">
-					</div>
 				</div>
-				<div class="column-browse">
-					<div class="card-box-border">
-						<h2>R-Food</h2>
-						<a href="food-notin-home.html"><img src="images/logo-food.png" alt="R-Food" style="max-width:100%; height: auto" title="R-Food"></a>
-						<hr style="visibility:hidden"><hr style="visibility:hidden">
-					</div>
-					<hr style="visibility:hidden">
-					<div class="card-box-border">
-						<h2>R-Sport</h2>
-						<a href="food-notin-home.html"><img src="images/logo-sport.png" alt="R-Sport" style="max-width:100%; height: auto" title="R-Sport"></a>
-						<hr style="visibility:hidden"><hr style="visibility:hidden">
-					</div>
-					<hr style="visibility:hidden">
-					<div class="card-box-border">
-						<h2>R-Book</h2>
-						<a href="food-notin-home.html"><img src="images/logo-book.png" alt="R-Book" style="max-width:100%; height: auto" title="R-Book"></a>
-						<hr style="visibility:hidden"><hr style="visibility:hidden">
-					</div>
-				</div>
+				<?php } } ?>
 			</div>
 		</div>
 		<hr style="visibility:hidden">
 		<footer class="footer">
 		<hr>
-			<p>© 2021 - 2021 https://xcsteven.github.io/R-Mall/ - All Rights Reserved.</p>
+			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
 			<nav class="bottom-nav-bar">
 				<a href="mall-tos.html">Terms of Service</a>
 				<a href="mall-ppolicy.html">Privacy Policy</a>

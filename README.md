@@ -15,7 +15,3 @@ Our website is called "R-Mall", with the two stores being "R-Clothes" and "R-Foo
 5. https://codepen.io/Zillionx/pen/xwOxoW (Show input fields on radio button selection)(mall-register.html)
 6. https://dichothue.com.vn/ (images and products' info for R-Food)
 7. https://www.farfetch.com (images and products' info for R-Clothes)
-# Explanation:
-- mall-browse.html: </br>
-  R-Clothes, R-Tech & R-Pet: Link to clothes-home.html </br>
-  R-Food, R-Sport & R-Book: Link to food-home.html

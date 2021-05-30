@@ -16,19 +16,19 @@
 					$temp[$csv[0]]['created_time'] = strtotime($temp[$csv[0]]['created_time']);
 				}
 				if(array_key_exists('featured', $temp[$csv[0]])){
-                            if($temp[$csv[0]]['featured'] == "FALSE"){
-                                $temp[$csv[0]]['featured'] = false;
-                            } else {
-                                $temp[$csv[0]]['featured'] = true;
-                            }
-                        }
-                        if(array_key_exists('featured_in_mall', $temp[$csv[0]])){
-                                if($temp[$csv[0]]['featured_in_mall'] == "FALSE"){
-                                    $temp[$csv[0]]['featured_in_mall'] = false;
-                                } else {
-                                    $temp[$csv[0]]['featured_in_mall'] = true;
-                                }
-                        }
+					if($temp[$csv[0]]['featured'] == "FALSE"){
+						$temp[$csv[0]]['featured'] = false;
+					} else {
+						$temp[$csv[0]]['featured'] = true;
+					}
+				}
+				if(array_key_exists('featured_in_mall', $temp[$csv[0]])){
+					if($temp[$csv[0]]['featured_in_mall'] == "FALSE"){
+						$temp[$csv[0]]['featured_in_mall'] = false;
+					} else {
+						$temp[$csv[0]]['featured_in_mall'] = true;
+					}
+				}
 			}
 		}
 	return $temp;
@@ -62,8 +62,8 @@
 				<a class="active" href="index.php">Home</a>
 				<a href="mall-aboutus.html">About Us</a>
 				<a href="mall-fees.html">Fees</a>
-				<a href="mall-myaccount.html">Account</a>
-				<a href="mall-browse.html">Browse</a>
+				<a href="mall-myaccount.php">Account</a>
+				<a href="mall-browse.php">Browse</a>
 				<a href="mall-faqs.html">FAQs</a>
 				<a href="mall-contact.html">Contact</a>
 			</nav>
@@ -162,10 +162,10 @@
 		<hr style="visibility:hidden">
 		<hr>
 		<footer class="footer">
-			<p>© 2021 - 2021 https://xcsteven.github.io/R-Mall/ - All Rights Reserved.</p>
+			<p><?php echo file_get_contents(__DIR__."/content/copyright.txt")?></p>
 			<nav class="bottom-nav-bar">
-				<a href="mall-tos.html">Terms of Service</a>
-				<a href="mall-ppolicy.html">Privacy Policy</a>
+				<a href="mall-info.php?page=tos">Terms of Service</a>
+				<a href="mall-info.php?page=privacy">Privacy Policy</a>
 			</nav>
 		</footer>
 		<script src="js/cookie.js"></script>

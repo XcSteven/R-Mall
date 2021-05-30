@@ -52,8 +52,8 @@
 				<a href="index.php">Home</a>
 				<a href="mall-aboutus.html">About Us</a>
 				<a href="mall-fees.html">Fees</a>
-				<a href="mall-myaccount.html">Account</a>
-				<a class="active" href="mall-browse.html">Browse</a>
+				<a href="mall-myaccount.php">Account</a>
+				<a class="active" href="mall-browse.php">Browse</a>
 				<a href="mall-faqs.html">FAQs</a>
 				<a href="mall-contact.html">Contact</a>
 			</nav>
@@ -93,11 +93,10 @@
 		</div>
 		<hr style="visibility:hidden">
 		<footer class="footer">
-		<hr>
-			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/ - All Rights Reserved.</p>
+			<p><?php echo file_get_contents(__DIR__."/content/copyright.txt")?></p>
 			<nav class="bottom-nav-bar">
-				<a href="mall-tos.html">Terms of Service</a>
-				<a href="mall-ppolicy.html">Privacy Policy</a>
+				<a href="mall-info.php?page=tos">Terms of Service</a>
+				<a href="mall-info.php?page=privacy">Privacy Policy</a>
 			</nav>
 		</footer>
 		<script src="js/cookie.js"></script>

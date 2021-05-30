@@ -2,31 +2,30 @@
 	if(file_exists(__DIR__.'/install.php')){
 		die('You must delete install.php before using this site');
 	}
-	if(!session_id()){
-		session_start();
+	$type = $_GET['page'];
+	$green = ['tos','privacy', 'copyright'];
+	if(!in_array($type, $green)){
+		$content = "";
+		header("Location: ./mall-dashboard.php");
+    exit();
+	} else {
+		$dir_c = __DIR__."/content/".$type.".txt";
+		$content = file_get_contents($dir_c);
 	}
-	if(!array_key_exists('is_admin', $_SESSION)){
-		if(array_key_exists('is_loggon', $_SESSION)){
-			header("Location: ./mall-myaccount.php");
-		} else {
-			header("Location: ./mall-login.php");
-		}
-	exit();
-}
 ?>
 <!doctype html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dashboard</title>
+		<title>Terms of Service</title>
 		<link rel="stylesheet" href="css/mall-style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
 	</head>
 	<body>
 		<body style="background-color:#f5f5dc">
 		<header class="header">
-		<a href="index.php"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
+			<a href="index.php"><img src="images/logo.png" alt="R-Mall logo" title="Home"></a>
 			<nav class="nav-menu-bar">
 				<a href="index.php">Home</a>
 				<a href="mall-aboutus.html">About Us</a>
@@ -44,33 +43,9 @@
 			<button id="cookie_accept">I understand</button>
 			<a href="https://gdpr-info.eu/">Learn more</a>
 		</div>
-		<div class="main">
-			<div class="abtus-content">
-			<h2>DASHBOARD</h2>
-				<div class="profile">
-					<div class="dash-column">
-						<div class="prof-card">
-							<h2>Copyright</h2>
-							<a href="mall-dashboard-edit.php?page=copyright">Modify</a>
-						</div>
-				</div>
-					<div class="dash-column">
-						<div class="prof-card">
-							<h2>Terms of Service</h2>
-							<a href="mall-dashboard-edit.php?page=tos">Modify</a>
-						</div>
-					</div>
-					<div class="dash-column">
-						<div class="prof-card">
-							<h2>Privacy Policy</h2>
-							<a href="mall-dashboard-edit.php?page=privacy"> Modify</a>
-						</div>
-					</div>
-				</div>
-				<hr style="visibility:hidden">
-			</div>
+		<div class="pptos">
+			<?php echo $content; ?>
 		</div>
-		<hr style="visibility:hidden">
 		<hr>
 		<footer class="footer">
 			<p><?php echo file_get_contents(__DIR__."/content/copyright.txt")?></p>

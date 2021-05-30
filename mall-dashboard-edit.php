@@ -1,3 +1,24 @@
+<?php
+	if(file_exists(__DIR__.'/install.php')){
+		die('You must delete install.php before using this site');
+	}
+	$type = $_GET['page'];
+	$msg = "";
+	$green = ['tos','privacy', 'copyright'];
+	if(!in_array($type, $green)){
+		header("Location: ./mall-dashboard.php");
+		exit();
+	}
+	$dir_c = __DIR__."/content/".$type.".txt";
+	$content = file_get_contents($dir_c);
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+		$type = $_POST['type'];
+		$content_p = $_POST['content'];
+		$content = $content_p;
+		file_put_contents($dir_c, $content_p);
+		$msg = 'Success';
+	}
+?>
 <!doctype html>
 <html>
 	<head>
@@ -15,8 +36,8 @@
 				<a href="index.php">Home</a>
 				<a href="mall-aboutus.html">About Us</a>
 				<a href="mall-fees.html">Fees</a>
-				<a href="mall-myaccount.html">Account</a>
-				<a href="mall-browse.html">Browse</a>
+				<a href="mall-myaccount.php">Account</a>
+				<a href="mall-browse.php">Browse</a>
 				<a href="mall-faqs.html">FAQs</a>
 				<a href="mall-contact.html">Contact</a>
 			</nav>
@@ -30,17 +51,24 @@
 		</div>
 		<div class="pptos">
 			<h2>Modify</h2>
-			<textarea rows="10" style="width: 99%"></textarea>
-			<hr style="visibility:hidden">
-			<input type="submit" value="Submit">
+      <p>
+     <?php echo $msg; $msg =""; ?>
+      </p>
+      <form  method="POST" action="">
+        
+        <textarea name="content" rows="10" style="width: 99%"><?php echo $content; ?></textarea>
+        <input value="<?php echo $_GET['page'];?>" hidden name="type">
+        <hr style="visibility:hidden">
+        <input type="submit" value="Submit">
+      </form>
 		</div>
 		<hr style="visibility:hidden">
 		<hr>
 		<footer class="footer">
-			<p>© 2021 - 2021 https://xcsteven.github.io/R-Mall/ - All Rights Reserved.</p>
+			<p><?php echo file_get_contents(__DIR__."/content/copyright.txt")?></p>
 			<nav class="bottom-nav-bar">
-				<a href="mall-tos.html">Terms of Service</a>
-				<a href="mall-ppolicy.html">Privacy Policy</a>
+				<a href="mall-info.php?page=tos">Terms of Service</a>
+				<a href="mall-info.php?page=privacy">Privacy Policy</a>
 			</nav>
 		</footer>
 		<script src="js/cookie.js"></script>

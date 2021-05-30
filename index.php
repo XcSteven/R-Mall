@@ -15,6 +15,20 @@
 				if(array_key_exists('created_time', $temp[$csv[0]])){
 					$temp[$csv[0]]['created_time'] = strtotime($temp[$csv[0]]['created_time']);
 				}
+				if(array_key_exists('featured', $temp[$csv[0]])){
+                            if($temp[$csv[0]]['featured'] == "FALSE"){
+                                $temp[$csv[0]]['featured'] = false;
+                            } else {
+                                $temp[$csv[0]]['featured'] = true;
+                            }
+                        }
+                        if(array_key_exists('featured_in_mall', $temp[$csv[0]])){
+                                if($temp[$csv[0]]['featured_in_mall'] == "FALSE"){
+                                    $temp[$csv[0]]['featured_in_mall'] = false;
+                                } else {
+                                    $temp[$csv[0]]['featured_in_mall'] = true;
+                                }
+                        }
 			}
 		}
 	return $temp;

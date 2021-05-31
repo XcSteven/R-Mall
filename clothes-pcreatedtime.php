@@ -39,10 +39,6 @@
 		return $array;
 	}
 
-
-
-
-
 	$product_dir = __DIR__.'/csv/products.csv';
 	$product_newest = newest(read_csv($product_dir));
 	$product_oldest = oldest(read_csv($product_dir));
@@ -120,21 +116,20 @@
 				$i = 0;
 				foreach($product_oldest as $mkey => $value){
 					if($value['store_id'] == "22"){
+				?>
+				<div class="pcolumn">
+					<div class="pcard-box">
+						<a href="clothes-pdetail-2.html"><img src="images/new10.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
+						<a href="clothes-pdetail-2.html"><p><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></p></a>
+						<p><i>This is a short description about the product.</i></p>
+						<p>Price: $<?php echo $value['price'];?></p>
+						<p>Created Date: <?php echo date("d/m/Y", $value['created_time']);?></p>
+					</div>
+				</div>
+				<?php 
+				$i++;
+			}}}
 			?>
-		<div class="pcolumn">
-			<div class="pcard-box">
-				<a href="clothes-pdetail-2.html"><img src="images/new10.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
-				<a href="clothes-pdetail-2.html"><p><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></p></a>
-				<p><i>This is a short description about the product.</i></p>
-				<p>Price: $<?php echo $value['price'];?></p>
-				<p>Created Date: <?php echo date("d/m/Y", $value['created_time']);?></p>
-			</div>
-		</div>
-		<?php 
-		$i++;
-	}}}
-	?>
-
 		</div>
 		<hr style="visibility:hidden">
 		<hr>

@@ -43,7 +43,7 @@
 				file_put_contents($account_file, $account_list);
 				if($msg == ""){
 					$msg_script = "<script>document.location = 'mall-thankyou-register.php';</script>";
-					$msg = "Success !";
+					$msg = "Success!";
 				}
 			}
 		} else {

@@ -2,24 +2,23 @@
 	if(file_exists(__DIR__.'/install.php')){
 		die('You must delete install.php before using this site');
 	}
-	if(!session_id()){
-		session_start();
+	$msg = "";
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+		$check = getimagesize($_FILES["avatar"]["tmp_name"]);
+		if($check !== false) {
+			move_uploaded_file($_FILES["avatar"]["tmp_name"], __DIR__.'/images/aboutus_'.$_POST['select'].'.jpg');
+			$msg = "Success!";
+			} else {
+			$msg = "Image invaild";
+			}
 	}
-	if(!array_key_exists('is_admin', $_SESSION)){
-		if(array_key_exists('is_loggon', $_SESSION)){
-			header("Location: ./mall-myaccount.php");
-		} else {
-			header("Location: ./mall-login.php");
-		}
-	exit();
-}
 ?>
 <!doctype html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dashboard</title>
+		<title>Edit</title>
 		<link rel="stylesheet" href="css/mall-style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
 	</head>
@@ -44,37 +43,22 @@
 			<button id="cookie_accept">I understand</button>
 			<a href="https://gdpr-info.eu/">Learn more</a>
 		</div>
-		<div class="main">
-			<div class="abtus-content">
-			<h2>DASHBOARD</h2>
-				<div class="profile">
-					<div class="dash-column">
-						<div class="prof-card">
-							<h2>Copyright</h2>
-							<a href="mall-dashboard-edit.php?page=copyright">Modify</a>
-						</div>
-					</div>
-					<div class="dash-column">
-						<div class="prof-card">
-							<h2>Terms of Service</h2>
-							<a href="mall-dashboard-edit.php?page=tos">Modify</a>
-						</div>
-					</div>
-					<div class="dash-column">
-						<div class="prof-card">
-							<h2>Privacy Policy</h2>
-							<a href="mall-dashboard-edit.php?page=privacy"> Modify</a>
-						</div>
-					</div>
-					<div class="dash-column">
-						<div class="prof-card">
-							<h2>About Us</h2>
-							<a href="mall-aboutus-edit.php"> Modify</a>
-						</div>
-					</div>
-				</div>
-				<hr style="visibility:hidden">
-			</div>
+		<div class="form">
+			<h1>Modify</h1>
+		<p><?php echo $msg; $msg =""; ?></p>
+		<form  method="POST" action="" enctype="multipart/form-data">
+			<label for="avatar">Upload a picture</label>
+			<input type="file" id="avatar" name="avatar">
+			<p>Choose the picture you want to be modified:</p>
+			<input type="radio" id="1" name="select" value="1" required>
+			<label for="1">1</label>
+			<input type="radio" id="2" name="select" value="2">
+			<label for="2">2</label>
+			<input type="radio" id="3" name="select" value="3">
+			<label for="3">3</label>
+			<hr style="visibility:hidden">
+			<input type="submit" value="Submit">
+		</form>
 		</div>
 		<hr style="visibility:hidden">
 		<hr>

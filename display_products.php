@@ -99,7 +99,7 @@
                 </div>
             </form>
         </div>
-        <form class="grid">
+        <div class="grid">
             <?php 
                 if ($_GET['order'] == 'newest') { 
                     $i = 0;
@@ -135,8 +135,8 @@
             <?php 
                 $i++;
             }}}}  
-        ?>
-        <hr>
+            ?>
+        </div>
         <footer class="foot">
 			<p>© 2021 - 2021 https://xcsteven.github.io/WPasm1/food-home.php - All Rights Reserved.</p>
 			<nav class="foot-navbar">

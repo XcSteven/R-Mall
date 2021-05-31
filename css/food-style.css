@@ -91,7 +91,6 @@
 	box-sizing: border-box;
 	display: flex;
 	width: 100%;
-	animation: autoscroll 10s infinite linear;
 }
 
 .grid {
@@ -624,12 +623,6 @@
 		padding: 20px;
 	}
 
-	@keyframes autoscroll {
-		100% {
-			transform: translateX(-160%);
-		}
-	}
-
 	.list:hover {
 		animation-play-state: paused;
 	}
@@ -781,11 +774,6 @@
 		width: 15%;
 	}
 
-	@keyframes autoscroll {
-		100% {
-			transform: translateX(-220%);
-		}
-	}
 
 	.list:hover {
 		animation-play-state: paused;
@@ -949,11 +937,5 @@
 
 	.total {
 		margin: auto
-	}
-
-	@keyframes autoscroll {
-		100% {
-			transform: translateX(-206%);
-		}
 	}
 }

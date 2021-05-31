@@ -37,12 +37,24 @@
 			<div class="products">
 			<h1>Browse Products by Created Time</h1>
 			</div>
+			<select id="compare_by" name="compare_by">
+				<option value="">Select a sort condition</option>
+				<option value="name">Name</option>
+				<option value="price">Price</option>
+				<option value="created_time">Created Time</option>
+				<option value="sizes">Number of Available Sizes</option>
+			  </select>
+			
+			
+			
+			
+			
 			<div class="form_p">
 				<form>
-					<label for="categories">Created Time:</label>
+					<label for="compare_by">Created Time:</label>
 					<select id="categories" name="categories">
 						<option>Default</option>
-						<option value="newest">Newest</option>
+						<option value="created_time">Newest</option>
 						<option value="oldest">Oldest</option>
 					</select>
 				</form>

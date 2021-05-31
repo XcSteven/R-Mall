@@ -104,6 +104,12 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 	color: #7e1616;
     text-align: center;
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	border-style: solid;
+	box-sizing: border-box;
+	background-color: #ffdabc;
 }
 .recommend_title{
     font-family: Georgia, 'Times New Roman', Times, serif;

@@ -26,8 +26,27 @@
 		}
 	return $temp;
 	}
+
+	function newest($array){
+		$date = array_column($array, 'created_time');
+		array_multisort($date, SORT_DESC, $array);
+		return $array;
+	}
+
+    function oldest($array){
+		$date = array_column($array, 'created_time');
+		array_multisort($date, SORT_ASC, $array);
+		return $array;
+	}
+
+
+
+
+
 	$product_dir = __DIR__.'/csv/products.csv';
-	$product = sort_list(read_csv($product_dir));
+	$product_newest = newest(read_csv($product_dir));
+	$product_oldest = oldest(read_csv($product_dir));
+
 ?>
 <!doctype html>
 <html>
@@ -68,27 +87,22 @@
 			<div class="products">
 			<h1>Browse Products by Created Time</h1>
 			</div>
-			<div class="form_p">
-				<form>
-					<label for="compare_by">Created Time:</label>
-					<select id="compare_by" name="compare_by">
-						<option value="newest">Newest</option>
-						<option value="oldest">Oldest</option>
+			<div class="form">
+				<form method="get" action="clothes-pcreatedtime.php" onsubmit="return checkSubmit()">
+					<label for="sort_by">Created Time:</label>
+					<select id="sort_by" name="sort_by">
+						<option value="newest">Newest to Oldest</option>
+						<option value="oldest">Oldest to Newest</option>
 					</select>
+					<input type='submit' value='Sort' name='act'>
 				</form>
 			</div>
-			<?php
-			function sort_list($array){
-				$date = array_column($array, 'created_time');
-				array_multisort($date, SORT_DESC, $array);
-				return $array;
-				}
-			?>
 			<div class="plist">
 				<?php 
-					$i = 0;
-					foreach($product as $mkey => $value){
-						if($value['store_id'] == "22"){
+					if ($_GET['sort_by'] == 'newest') { 
+						$i = 0;
+						foreach($product_newest as $mkey => $value){
+							if($value['store_id'] == "22"){
 				?>
 				<div class="pcolumn">
 					<div class="pcard-box">
@@ -101,8 +115,26 @@
 				</div>
 				<?php 
 				$i++;
-			}} ?>
+			}}}
+			elseif ($_GET['sort_by'] == 'oldest') { 
+				$i = 0;
+				foreach($product_oldest as $mkey => $value){
+					if($value['store_id'] == "22"){
+			?>
+		<div class="pcolumn">
+			<div class="pcard-box">
+				<a href="clothes-pdetail-2.html"><img src="images/new10.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
+				<a href="clothes-pdetail-2.html"><p><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></p></a>
+				<p><i>This is a short description about the product.</i></p>
+				<p>Price: $<?php echo $value['price'];?></p>
+				<p>Created Date: <?php echo date("d/m/Y", $value['created_time']);?></p>
 			</div>
+		</div>
+		<?php 
+		$i++;
+	}}}
+	?>
+
 		</div>
 		<hr style="visibility:hidden">
 		<hr>

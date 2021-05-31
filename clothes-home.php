@@ -81,7 +81,7 @@
 				<?php 
 					$i = 0;
 					foreach($product as $mkey => $value){
-						if($i > 9) break;
+						if($i > 5) break;
 						if($value['store_id'] == "22"){
 				?>
 				<div class="column">

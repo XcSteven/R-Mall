@@ -16,4 +16,4 @@ Our website is called "R-Mall", with the two stores being "R-Clothes" and "R-Foo
 6. https://dichothue.com.vn/ (images and products' info for R-Food)
 7. https://www.farfetch.com (images and products' info for R-Clothes)
 # Sidenote:
-Only the copyright of .php pages can be changed.
+Only the copyright of mall .php pages can be changed.

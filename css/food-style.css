@@ -91,6 +91,7 @@
 	box-sizing: border-box;
 	display: flex;
 	width: 100%;
+	overflow: auto;
 }
 
 .grid {

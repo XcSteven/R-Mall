@@ -51,10 +51,10 @@
 	<body>
 		<body style="background-color:#F5F5DC">
 		<header class="header">
-			<a href="clothes-home.html"><img src="images/logo-clothes.png" alt="R-Clothes logo" title="Home"></a>
+			<a href="clothes-home.php"><img src="images/logo-clothes.png" alt="R-Clothes logo" title="Home"></a>
 			<nav class="header-navbar">
 				<a href="index.php">R-Mall</a>
-				<a class="active" href="clothes-home.html">Clothes Store</a>
+				<a class="active" href="clothes-home.php">Clothes Store</a>
                 <a href="clothes-aboutus.html">About Us</a>
 				<div class="selectlist">
 					<div class="dropbtn">Products</div>
@@ -77,15 +77,15 @@
 			<div class="products">
 				<h1>New Products</h1>
 			</div>
-			<div class="list">
+			<div class="plist">
 				<?php 
 					$i = 0;
 					foreach($product as $mkey => $value){
 						if($i > 4) break;
 						if($value['store_id'] == "22"){
 				?>
-				<div class="column">
-					<div class="card-box">
+				<div class="pcolumn">
+					<div class="pcard-box">
 						<a href="clothes-pdetail-1.html"><img src="images/new3.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
 						<p><a href="clothes-pdetail-1.html"><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></a></p>
 						<p>$<?php echo $value['price'];?></p>
@@ -98,15 +98,15 @@
 			<div class="products">
 				<h1>Featured Products</h1>
 			</div>
-			<div class="list">
+			<div class="plist">
 				<?php
 					$i = 0;
 					foreach($product as $mkey => $value){
 						if($i > 9) break;
 						if($value['featured_in_store']){
 				?>
-				<div class="column">
-					<div class="card-box">
+				<div class="pcolumn">
+					<div class="pcard-box">
 						<a href="clothes-pdetail-2.html"><img src="images/new10.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
 						<p><a href="clothes-pdetail-2.html"><b><?php echo $value['name'] ?></b></a></p>
 						<p>$<?php echo $value['price'];?></p>

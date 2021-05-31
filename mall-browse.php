@@ -83,7 +83,7 @@
 				<div class="column-browse" style="text-align: center">
 					<div class="card-box-border">
 						<h2><?php echo $value['name'];?></h2>
-						<a href="clothes-home.html"><img src="images/logo-clothes.png" alt="R-Clothes" style="max-width:100%; height: auto" title="R-Clothes"></a>
+						<a href="clothes-home.php"><img src="images/logo-clothes.png" alt="R-Clothes" style="max-width:100%; height: auto" title="R-Clothes"></a>
 						<hr style="visibility:hidden"><hr style="visibility:hidden">
 					</div>
 					<hr style="visibility:hidden">

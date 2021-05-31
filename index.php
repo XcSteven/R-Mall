@@ -106,7 +106,7 @@
 				?>
 				<div class="column">
 					<div class="card-box">
-						<a href="clothes-pdetail-1.html"><img src="images/new1.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
+						<a href="clothes-pdetail-1.html"><img src="images/new3.jpg" alt="<?php echo $value['name']?>" style="max-width:100%; height: auto"></a>
 						<p><a href="clothes-pdetail-1.html"><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></a></p>
 						<a href="clothes-home.php"><?php echo $store[$value['store_id']]['name']; ?></a>
 						<p>$<?php echo $value['price'];?></p>
@@ -148,7 +148,7 @@
 				?>
 				<div class="column">
 					<div class="card-box">
-						<a href="food-detail-1.html"><img src="images/coca-cola.jpg" alt="Coca-Cola" style="max-width:100%; height: auto"></a>
+						<a href="food-detail-1.html"><img src="images/cherry1.jpg" alt="<?php echo $value['name']?>" style="max-width:100%; height: auto"></a>
 						<p><a href="food-detail-1.html"><b><?php echo $value['name'] ?></b></a></p>
 						<a href="food-home.php"><?php echo $store[$value['store_id']]['name']; ?></a>
 						<p>$<?php echo $value['price'];?></p>

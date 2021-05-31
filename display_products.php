@@ -123,7 +123,7 @@
                 ?>
                 <div class="column">
                     <div class="box">
-                        <a href="food-detail-2.html"><img src="images/vinamilk.jpg" alt="<?php echo $value['name'] ?>" style="width:80%"></a>
+                        <a href="food-detail-2.html"><img src="images/coca-cola.jpg" alt="<?php echo $value['name'] ?>" style="width:80%"></a>
                         <p><a href="food-detail-2.html"><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></a></p>
                         <p>$<?php echo $value['price'];?></p>
                     </div>

@@ -26,24 +26,15 @@
 		}
 	return $temp;
 	}
-	function sort_list($array){
-		$date = array_column($array, 'created_time');
-		array_multisort($date, SORT_DESC, $array);
-		return $array;
-	}
-	$store_dir = __DIR__.'/csv/stores.csv';
 	$product_dir = __DIR__.'/csv/products.csv';
-	$categories_dir = __DIR__.'/csv/categories.csv';
-	$store = sort_list(read_csv($store_dir));
 	$product = sort_list(read_csv($product_dir));
-	$categories = read_csv($categories_dir);
 ?>
 <!doctype html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Clothes Store</title>
+		<title>Product - Created Time</title>
 		<link rel="stylesheet" href="css/clothes-style.css">
 		<link rel="stylesheet" href="css/mall-style.css">
 		<link rel="shortcut icon" href="images/favicon.ico">
@@ -54,17 +45,17 @@
 			<a href="clothes-home.html"><img src="images/logo-clothes.png" alt="R-Clothes logo" title="Home"></a>
 			<nav class="header-navbar">
 				<a href="index.php">R-Mall</a>
-				<a class="active" href="clothes-home.html">Clothes Store</a>
+				<a href="clothes-home.html">Clothes Store</a>
                 <a href="clothes-aboutus.html">About Us</a>
 				<div class="selectlist">
 					<div class="dropbtn">Products</div>
 					<div class="selectlist-content">
 						<a href="clothes-pcategory.html">Browse by Categories</a>
-						<a href="clothes-pcreatedtime.html">Browse by Created Time</a>
+						<a class="active" href="clothes-pcreatedtime.html">Browse by Created Time</a>
 					</div>
 				</div>
 				<a href="clothes-contact.html">Contact</a>
-			</nav>		
+			</nav>			
 		</header>
 		<hr>
 		<div id="cookie" class="cookie">
@@ -73,48 +64,44 @@
 			<button id="cookie_accept">I understand</button>
 			<a href="https://gdpr-info.eu/">Learn more</a>
 		</div>
-		<div class="main" style="overflow-x: hidden">
+		<div class="products-general">
 			<div class="products">
-				<h1>New Products</h1>
+			<h1>Browse Products by Created Time</h1>
 			</div>
-			<div class="list">
+			<div class="form_p">
+				<form>
+					<label for="compare_by">Created Time:</label>
+					<select id="compare_by" name="compare_by">
+						<option value="newest">Newest</option>
+						<option value="oldest">Oldest</option>
+					</select>
+				</form>
+			</div>
+			<?php
+			function sort_list($array){
+				$date = array_column($array, 'created_time');
+				array_multisort($date, SORT_DESC, $array);
+				return $array;
+				}
+			?>
+			<div class="plist">
 				<?php 
 					$i = 0;
 					foreach($product as $mkey => $value){
-						if($i > 9) break;
 						if($value['store_id'] == "22"){
 				?>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-pdetail-1.html"><img src="images/new3.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
-						<p><a href="clothes-pdetail-1.html"><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></a></p>
-						<p>$<?php echo $value['price'];?></p>
+				<div class="pcolumn">
+					<div class="pcard-box">
+						<a href="clothes-pdetail-2.html"><img src="images/new10.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
+						<a href="clothes-pdetail-2.html"><p><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></p></a>
+						<p><i>This is a short description about the product.</i></p>
+						<p>Price: $<?php echo $value['price'];?></p>
+						<p>Created Date: <?php echo date("d/m/Y", $value['created_time']);?></p>
 					</div>
 				</div>
 				<?php 
 				$i++;
 			}} ?>
-			</div>
-			<div class="products">
-				<h1>Featured Products</h1>
-			</div>
-			<div class="list">
-				<?php
-					$i = 0;
-					foreach($product as $mkey => $value){
-						if($i > 9) break;
-						if($value['featured_in_store']){
-				?>
-				<div class="column">
-					<div class="card-box">
-						<a href="clothes-pdetail-2.html"><img src="images/new10.jpg" alt="<?php echo $value['name'] ?>" style="max-width:100%; height: auto"></a>
-						<p><a href="clothes-pdetail-2.html"><b><?php echo $value['name'] ?></b></a></p>
-						<p>$<?php echo $value['price'];?></p>
-					</div>
-				</div>
-				<?php 
-					$i++;
-				}} ?>
 			</div>
 		</div>
 		<hr style="visibility:hidden">
@@ -127,5 +114,6 @@
 			</nav>
 		</footer>
 		<script src="js/cookie.js"></script>
+		<script src="js/clothes-pcreatedtime.js"></script>
 	</body>
 </html>

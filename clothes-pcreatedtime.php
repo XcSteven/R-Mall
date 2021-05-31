@@ -66,7 +66,7 @@
 					<div class="dropbtn">Products</div>
 					<div class="selectlist-content">
 						<a href="clothes-pcategory.html">Browse by Categories</a>
-						<a class="active" href="clothes-pcreatedtime.html">Browse by Created Time</a>
+						<a class="active" href="clothes-pcreatedtime.php">Browse by Created Time</a>
 					</div>
 				</div>
 				<a href="clothes-contact.html">Contact</a>

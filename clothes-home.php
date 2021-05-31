@@ -60,7 +60,7 @@
 					<div class="dropbtn">Products</div>
 					<div class="selectlist-content">
 						<a href="clothes-pcategory.html">Browse by Categories</a>
-						<a href="clothes-pcreatedtime.html">Browse by Created Time</a>
+						<a href="clothes-pcreatedtime.php">Browse by Created Time</a>
 					</div>
 				</div>
 				<a href="clothes-contact.html">Contact</a>
@@ -81,7 +81,7 @@
 				<?php 
 					$i = 0;
 					foreach($product as $mkey => $value){
-						if($i > 5) break;
+						if($i > 4) break;
 						if($value['store_id'] == "22"){
 				?>
 				<div class="column">

@@ -46,7 +46,7 @@
 		</div>
 		<hr>
 		<footer class="footer">
-			<p>© 2021 - 2021 https://xcsteven.github.io/R-Mall/ - All Rights Reserved.</p>
+			<p><?php echo file_get_contents(__DIR__."/content/copyright.txt")?></p>
 			<nav class="bottom-nav-bar">
 				<a href="mall-info.php?page=tos">Terms of Service</a>
 				<a href="mall-info.php?page=privacy">Privacy Policy</a>

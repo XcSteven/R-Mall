@@ -103,34 +103,38 @@
             <?php 
                 if ($_GET['order'] == 'newest') { 
                     $i = 0;
-                    foreach($product_asc as $mkey => $value){
+                    foreach($product_desc as $mkey => $value){
                         if($value['featured_in_mall']){
+                        if($value['store_id'] == "13"){
             ?>
             <div class="column">
                 <div class="box">
                     <a href="food-detail-1.html"><img src="images/cherry1.jpg" alt="<?php echo $value['name'] ?>" style="width:80%"></a>
                     <p><a href="food-detail-1.html"><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></a></p>
                     <p>$<?php echo $value['price'];?></p>
+                    <p><?php echo date("d/m/Y", $value['created_time']);?></p>
                 </div>
             </div>
             <?php 
                 $i++;
-            }}} 
+            }}}} 
             elseif ($_GET['order'] == 'oldest') {
                 $i = 0;
-                foreach($product_desc as $mkey => $value){
+                foreach($product_asc as $mkey => $value){
                     if($value['featured_in_mall']){
+                    if($value['store_id'] == "13"){
                 ?>
                 <div class="column">
                     <div class="box">
                         <a href="food-detail-2.html"><img src="images/coca-cola.jpg" alt="<?php echo $value['name'] ?>" style="width:80%"></a>
                         <p><a href="food-detail-2.html"><b style="text-decoration:underline"></b><b><?php echo $value['name'] ?></b></a></p>
                         <p>$<?php echo $value['price'];?></p>
+                        <p><?php echo date("d/m/Y", $value['created_time']);?></p>
                     </div>
                 </div>
             <?php 
                 $i++;
-            }}}  
+            }}}}  
         ?>
         <hr>
         <footer class="foot">
@@ -141,6 +145,5 @@
 			</nav>
         </footer>
         <script src="js/cookie.js"></script>
-        <script src="js/time_sort.js"></script>
 	</body>
 </html>

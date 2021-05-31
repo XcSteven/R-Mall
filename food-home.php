@@ -81,6 +81,7 @@
 					$i = 0;
 					foreach($product as $mkey => $value){
 						if($i == 5) break;
+						if($value['store_id'] == "13"){
 				?>
 				<div class="column">
 					<div class="box">
@@ -91,7 +92,7 @@
 				</div>
 				<?php 
 					$i++;
-				} ?>
+				}} ?>
 			</div>
 			<hr>
 			<div class="title">
@@ -103,6 +104,7 @@
 					foreach($product as $mkey => $value){
 						if($i > 9) break;
 						if($value['featured_in_mall']){
+						if($value['store_id'] == "13"){
 				?>
 				<div class="column">
 					<div class="box">
@@ -113,7 +115,7 @@
 				</div>
 				<?php 
 					$i++;
-				}} ?>
+				}}} ?>
 			</div>
 		</div>
 		<hr>
